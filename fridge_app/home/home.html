@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fridge App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-    
+    <ion-content>
+        <div id="statusbar">
+            <ion-icon name="unlock" size="medium" class="left-margin"></ion-icon>
+            <ion-icon name="wifi" size="medium" class="right-margin float-right"></ion-icon>
+        </div>
+        <ion-slides pager="true">
+
+            <ion-slide>
+                <div class="page" id="page1">
+                    <h1>TEST</h1>
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <div class="page" id="page2">
+                    <div id="header">
+                        <div id="weather">
+                            <ion-icon name="cloudy-night" size="large"></ion-icon>
+                            <p id="temperature">35</p>
+                        </div>
+                    </div>
+
+                    <ion-content forceOverscroll="true" id="widgets">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>First Widget</ion-card-subtitle>
+                                <ion-card-title>Card Title</ion-card-title>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                Spotify
+                            </ion-card-content>
+                        </ion-card>
+
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>First Widget</ion-card-subtitle>
+                                <ion-card-title>Card Title</ion-card-title>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                Spotify
+                            </ion-card-content>
+                        </ion-card>
+
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>First Widget</ion-card-subtitle>
+                                <ion-card-title>Card Title</ion-card-title>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                Spotify
+                            </ion-card-content>
+                        </ion-card>
+
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>First Widget</ion-card-subtitle>
+                                <ion-card-title>Card Title</ion-card-title>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                Spotify
+                            </ion-card-content>
+                        </ion-card>
+
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-subtitle>Second Widget</ion-card-subtitle>
+                                <ion-card-title>Card Title</ion-card-title>
+                            </ion-card-header>
+
+                            <ion-card-content>
+                                Recipies
+                            </ion-card-content>
+                        </ion-card>
+
+                    </ion-content>
+
+                    <ion-content scroll-x="true" id="applist">
+                            <ion-icon name="logo-android" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-apple" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-bitbucket" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-github" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-ionitron" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-octocat" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-youtube" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-skype" size="large" class="inside"></ion-icon>
+                            <ion-icon name="logo-usd" size="large" class="inside"></ion-icon>
+                    </ion-content>
+                </div>
+            </ion-slide>
+        </ion-slides>
+    </ion-content>
+
 </body>
+
 </html>

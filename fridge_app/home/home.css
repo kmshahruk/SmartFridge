@@ -1,0 +1,58 @@
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+ion-slides {
+    height: 95%;
+}
+
+.left-margin {
+    margin-left: 3%;
+}
+
+.right-margin {
+    margin-right: 3%;
+}
+
+.float-right {
+    float: right;
+}
+
+#statusbar {
+    margin-top: 2%;
+    height: 3%;
+}
+
+#header {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#weather {
+    width: 20%;
+    height: 10%;
+    left: 10%;
+}
+
+#temperature {
+    margin-top: unset !important;
+}
+
+#widgets {
+    height: 70%;
+}
+
+#applist {
+    margin-top: 5%;
+    height: 10%;
+    overflow: scroll;
+    white-space: nowrap;
+    
+}
+
+.inside {
+    margin-top: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
