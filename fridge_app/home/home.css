@@ -15,6 +15,10 @@ ion-slides {
     margin-right: 3%;
 }
 
+.float-left {
+    float:left; 
+}
+
 .float-right {
     float: right;
 }
