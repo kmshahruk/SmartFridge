@@ -40,12 +40,28 @@
                     <ion-content forceOverscroll="true" id="widgets">
                         <ion-card>
                             <ion-card-header>
-                                <ion-card-subtitle>First Widget</ion-card-subtitle>
-                                <ion-card-title>Card Title</ion-card-title>
+                                <ion-card-title>Spotify</ion-card-title>
                             </ion-card-header>
 
                             <ion-card-content>
-                                Spotify
+
+                                <ion-item lines="none">
+                                    <ion-thumbnail slot="start">
+                                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                                    </ion-thumbnail>
+                                    <ion-label>
+                                        <h2>Song</h2>
+                                        <p>Artist</p>
+                                    </ion-label>
+                                </ion-item>
+
+                                <ion-range min="-200" max="200" color="primary">
+                                    <ion-label slot="start">0</ion-label>
+                                    <ion-label slot="end">3:45</ion-label>
+                                </ion-range>
+                                <ion-icon name="skip-backward" size="large" class="float-left left-margin"></ion-icon>
+                                <ion-icon name="play" size="large"></ion-icon>
+                                <ion-icon name="skip-forward" size="large" class="float-right right-margin"></ion-icon>
                             </ion-card-content>
                         </ion-card>
 
@@ -96,15 +112,15 @@
                     </ion-content>
 
                     <ion-content scroll-x="true" id="applist">
-                            <ion-icon name="logo-android" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-apple" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-bitbucket" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-github" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-ionitron" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-octocat" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-youtube" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-skype" size="large" class="inside"></ion-icon>
-                            <ion-icon name="logo-usd" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-android" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-apple" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-bitbucket" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-github" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-ionitron" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-octocat" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-youtube" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-skype" size="large" class="inside"></ion-icon>
+                        <ion-icon name="logo-usd" size="large" class="inside"></ion-icon>
                     </ion-content>
                 </div>
             </ion-slide>
