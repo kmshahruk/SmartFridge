@@ -29,16 +29,10 @@ ion-slides {
 }
 
 #header {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-#weather {
-    display: inline-block;
-    width: 20%;
-    height: 10%;
-    left: 10%;
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #temperature {
@@ -49,7 +43,7 @@ ion-slides {
     height: 70%;
 }
 
-#applist {
+#app-list {
     margin-top: 5%;
     height: 10%;
     overflow: scroll;
@@ -57,7 +51,7 @@ ion-slides {
     
 }
 
-.inside {
+.app-icon {
     margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
@@ -68,6 +62,7 @@ ion-slides {
 }
 
 .thumbnail-widget {
+    border-radius: 10%;
     width: 80px !important;
     height: 80px !important;
 }

@@ -24,21 +24,31 @@
 
             <ion-slide>
                 <div class="page" id="page1">
-                    <h1>TEST</h1>
+                    <ion-header>
+                        <ion-toolbar>
+                            <ion-title>Refrigerator Control</ion-title>
+                        </ion-toolbar>
+                    </ion-header>
                 </div>
             </ion-slide>
 
             <ion-slide>
                 <div class="page" id="page2">
                     <div id="header">
-                        <div id="weather">
+                        <div class="left-margin">
                             <ion-icon name="cloudy-night" size="large" id="weather-icon"></ion-icon>
                             <p id="temperature">35</p>
                         </div>
 
-                        <img src="https://americanhistory.si.edu/sites/default/files/blog_teaser_images/Sept_11_note.jpg" class="thumbnail-widget">
-                        <img src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg" class="thumbnail-widget">
-                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                        <div class="right-margin">
+                            <img src="https://americanhistory.si.edu/sites/default/files/blog_teaser_images/Sept_11_note.jpg"
+                                class="thumbnail-widget">
+                            <img src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"
+                                class="thumbnail-widget">
+                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+                                class="thumbnail-widget">
+                        </div>
+
                     </div>
 
                     <ion-content forceOverscroll="true" id="widgets">
@@ -48,7 +58,6 @@
                             </ion-card-header>
 
                             <ion-card-content>
-
                                 <ion-item lines="none">
                                     <ion-thumbnail slot="start">
                                         <img src="https://m.media-amazon.com/images/I/812lKnG10GL._SS500_.jpg">
@@ -89,7 +98,7 @@
                                 </ion-label>
                             </ion-item>
 
-                            <ion-item onclick="" detail>
+                            <ion-item onclick="" detail lines="none">
                                 <ion-label>
                                     <h2>7:30 PM</h2>
                                     <p>Get dinner with Dave</p>
@@ -141,16 +150,16 @@
 
                     </ion-content>
 
-                    <ion-content scroll-x="true" scroll-y="false" id="applist" onscroll="alert('tes')">
-                        <ion-icon name="logo-android" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-apple" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-bitbucket" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-github" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-ionitron" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-octocat" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-youtube" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-skype" size="large" class="inside"></ion-icon>
-                        <ion-icon name="logo-usd" size="large" class="inside"></ion-icon>
+                    <ion-content scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
+                        <ion-icon name="logo-android" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-apple" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-bitbucket" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-skype" size="large" class="app-icon"></ion-icon>
+                        <ion-icon name="logo-usd" size="large" class="app-icon"></ion-icon>
                     </ion-content>
                 </div>
             </ion-slide>
