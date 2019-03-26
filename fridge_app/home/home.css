@@ -34,9 +34,11 @@ ion-slides {
 }
 
 #weather {
+    display: inline-block;
     width: 20%;
     height: 10%;
     left: 10%;
+    float: left;
 }
 
 #temperature {
@@ -56,7 +58,16 @@ ion-slides {
 }
 
 .inside {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
+}
+
+#weather-icon {
+    zoom: 2.0;
+}
+
+.thumbnail-widget {
+    width: 80px !important;
+    height: 80px !important;
 }

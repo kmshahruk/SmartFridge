@@ -32,9 +32,13 @@
                 <div class="page" id="page2">
                     <div id="header">
                         <div id="weather">
-                            <ion-icon name="cloudy-night" size="large"></ion-icon>
+                            <ion-icon name="cloudy-night" size="large" id="weather-icon"></ion-icon>
                             <p id="temperature">35</p>
                         </div>
+
+                        <img src="https://americanhistory.si.edu/sites/default/files/blog_teaser_images/Sept_11_note.jpg" class="thumbnail-widget">
+                        <img src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg" class="thumbnail-widget">
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
                     </div>
 
                     <ion-content forceOverscroll="true" id="widgets">
@@ -47,12 +51,11 @@
 
                                 <ion-item lines="none">
                                     <ion-thumbnail slot="start">
-                                        <img
-                                            src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                                        <img src="https://m.media-amazon.com/images/I/812lKnG10GL._SS500_.jpg">
                                     </ion-thumbnail>
                                     <ion-label>
-                                        <h2>Song</h2>
-                                        <p>Artist</p>
+                                        <h2>Thotiana</h2>
+                                        <p>Blueface</p>
                                     </ion-label>
                                 </ion-item>
 
@@ -96,13 +99,22 @@
 
                         <ion-card>
                             <ion-card-header>
-                                <ion-card-subtitle>First Widget</ion-card-subtitle>
-                                <ion-card-title>Card Title</ion-card-title>
+                                <ion-card-title>Uber Eats</ion-card-title>
                             </ion-card-header>
 
-                            <ion-card-content>
-                                Spotify
-                            </ion-card-content>
+                            <ion-item lines="none">
+                                <ion-label>
+                                    <h2>Order</h2>
+                                    <p>Large fries, medium drink</p>
+                                </ion-label>
+                            </ion-item>
+
+                            <ion-item lines="none">
+                                <ion-label>
+                                    <h2>Arrival</h2>
+                                    <p>20 minutes</p>
+                                </ion-label>
+                            </ion-item>
                         </ion-card>
 
                         <ion-card>
@@ -129,7 +141,7 @@
 
                     </ion-content>
 
-                    <ion-content scroll-x="true" id="applist">
+                    <ion-content scroll-x="true" scroll-y="false" id="applist" onscroll="alert('tes')">
                         <ion-icon name="logo-android" size="large" class="inside"></ion-icon>
                         <ion-icon name="logo-apple" size="large" class="inside"></ion-icon>
                         <ion-icon name="logo-bitbucket" size="large" class="inside"></ion-icon>
