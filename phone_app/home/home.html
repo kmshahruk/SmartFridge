@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Phone App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 </head>
+
 <body>
-    
+    <ion-app>
+
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button></ion-back-button>
+                </ion-buttons>
+                <ion-title>Home</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+
+        </ion-content>
+
+        <ion-tabs>
+            <ion-tab tab="home">Home Content</ion-tab>
+            <ion-tab tab="settings">Settings Content</ion-tab>
+
+            <ion-tab-bar slot="bottom">
+
+                <ion-tab-button tab="home">
+                    <ion-label>Home</ion-label>
+                    <ion-icon name="home"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="notes">
+                    <ion-label>Notes</ion-label>
+                    <ion-icon name="paper"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="catalogue">
+                    <ion-label>Catalogue</ion-label>
+                    <ion-icon name="list"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="settings">
+                    <ion-label>Settings</ion-label>
+                    <ion-icon name="settings"></ion-icon>
+                </ion-tab-button>
+
+            </ion-tab-bar>
+        </ion-tabs>
+
+    </ion-app>
 </body>
+
 </html>
