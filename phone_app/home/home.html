@@ -59,7 +59,28 @@
                 </ion-header>
 
                 <ion-content>
-                    <p>Settings</p>
+                    <ion-list>
+                        <ion-list-header>Single Selection</ion-list-header>
+
+                        <ion-item>
+                            <ion-label>Theme</ion-label>
+                            <ion-select value="light">
+                                <ion-select-option value="light">Light</ion-select-option>
+                                <ion-select-option value="dark">Dark</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>Temperature Unit</ion-label>
+                            <ion-select value="f">
+                                <ion-select-option value="f">Fahrenheit</ion-select-option>
+                                <ion-select-option value="c">Celcius</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+
+                    </ion-list>
+
+                    <ion-button>Log Out</ion-button>
                 </ion-content>
             </ion-tab>
 
