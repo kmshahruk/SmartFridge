@@ -1,0 +1,21 @@
+.compartment {
+    text-align: center;
+    border: 2px solid #0599ee;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 4px;
+}
+.compartment:hover {
+    background-color: #004E89;
+    border-color: #004E89;
+    color: white;
+
+}
+
+.compartment:active {
+    background-color: #004E89;
+    border-color: #004E89;
+    color: white;
+}
