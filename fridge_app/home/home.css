@@ -70,7 +70,7 @@ ion-slides {
 .compartment {
     text-align: center;
     border: 2px solid #0599ee;
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +96,14 @@ ion-slides {
 }
 
 #FridgeControl {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 7%;
+}
+
+#preset {
+    bottom: 30px;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
