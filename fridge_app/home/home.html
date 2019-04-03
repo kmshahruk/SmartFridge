@@ -31,47 +31,74 @@
                             </ion-toolbar>
                         </ion-header>
 
-                        <div id="comparements">
-                            <h3>Comparements</h3>
+                        <div id="compartments">
+                            <h3>Compartments</h3>
                             <ion-grid>
                                 <ion-row>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p> Temperature: 15°F </p>
+                                        <p> Humidity: 705°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
                                 </ion-row>
                                 <ion-row>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
                                 </ion-row>
                                 <ion-row>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
-                                    <ion-col class="compartment">75°F</ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20°F </p>
+                                    </ion-col>
                                 </ion-row>
                             </ion-grid>
                         </div>
                         <div id="FridgeControl">
 
-                                <div id="HumilityControl">
-                                    <h3>Humility Control</h3>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle"></ion-icon>
-                                    <p>75°F</p>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"></ion-icon>
+                                <div id="HumidityControl">
+                                    <h3>Humidity  Control</h3>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrHumidity(this)"></ion-icon>
+                                    <p id="humidityNumber">75°F</p>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrHumidity(this)"></ion-icon>
                                 </div>
                                 <div id="TemperatureControl">
                                     <h3>Temperature Control</h3>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle"></ion-icon>
-                                    <p>75°F</p>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"></ion-icon>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrTemp(this)"></ion-icon>
+                                    <p id="temperatureNumber">75°F</p>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrTemp(this)"></ion-icon>
                                 </div>
    
                         </div>
                         <div id="preset">
-                                <ion-button shape="round" fill="outline">Vegetable</ion-button>
-                                <ion-button shape="round" fill="outline">Drink</ion-button>
-                                <ion-button shape="round" fill="outline">Meat</ion-button>
-                                <ion-button shape="round" fill="outline">Fruit</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="vegetablePreset()">Vegetable</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="drinkPreset()">Drink</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="meatPreset()">Meat</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="FruitPreset()">Fruit</ion-button>
                         </div>
                     </div> 
 
