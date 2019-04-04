@@ -91,6 +91,6 @@ function fruitPreset() {
     var newHumString = "Humidity: 26%"
     selectedCompartment.innerHTML = selectedCompartment.innerHTML.replace(matchTempText[0], newTempString)
     selectedCompartment.innerHTML = selectedCompartment.innerHTML.replace(matchHumText[0], newHumString)
-    temperature.innerHTML = "40°F"
-    humidity.innerHTML = "26%"
+    temperature.innerHTML = "43°F"
+    humidity.innerHTML = "30%"
 }
