@@ -12,8 +12,8 @@ function selectCompartment(compartment) {
     previousCompartment = selectedCompartment
     if (previousCompartment != undefined && previousCompartment != compartment) {
         previousCompartment.className = "compartment hydrated"
-        compartment.className = "compartment hydrated selected"
     }
+    compartment.className = "compartment hydrated selected"
     selectedCompartment = compartment
     var nums = compartment.innerHTML.toString().match(/\d+/g);
     temperature.innerHTML = nums[0] + "°F";
