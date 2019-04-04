@@ -11,11 +11,12 @@
     <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <link rel="stylesheet" href="home.css">
-
+    <script src="home.js"></script>
 </head>
 
 <body>
     <ion-app>
+        <ion-modal-controller></ion-modal-controller>
         <ion-tabs>
             <ion-tab tab="home">
                 <ion-header>
@@ -23,11 +24,21 @@
                         <ion-title>Home</ion-title>
                     </ion-toolbar>
                 </ion-header>
-              
+           
+
                 <div id ="compartment">
                 <ion-grid>
                     <ion-row>
-                        <ion-col class="compartment">75°F</ion-col>
+                           
+                        <ion-col class="compartment" id ="c1" onclick="presentModal()"></ion-col>
+                        <script>
+                                var compartment = {
+                                  temp:"75",
+                                  humid:"40",
+                                };
+                                
+                                document.getElementById("c1").innerHTML = "Tempature: " + compartment.temp + " Humidity: " + compartment.humid;
+                        </script>
                         <ion-col class="compartment">75°F</ion-col>
                         <ion-col class="compartment">75°F</ion-col>
                     </ion-row>
