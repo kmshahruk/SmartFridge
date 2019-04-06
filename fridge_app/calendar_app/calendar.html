@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fridge App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+
+<body>
+    <div class="month">
+        <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+                <h1>August</h1>
+                <h2>2019</h2>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+    </ul>
+    <div>
+        <ion-grid class="daysGrid">
+            <ion-row>
+                <ion-col class="dayUnhighlight">31</ion-col>
+                <ion-col class="day">1</ion-col>
+                <ion-col class="day">2</ion-col>
+                <ion-col class="day">3</ion-col>
+                <ion-col class="day">4</ion-col>
+                <ion-col class="day">5</ion-col>
+                <ion-col class="day">6</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="day">7</ion-col>
+                <ion-col class="day">8</ion-col>
+                <ion-col class="day">9</ion-col>
+                <ion-col class="day">10</ion-col>
+                <ion-col class="day">11</ion-col>
+                <ion-col class="day">12</ion-col>
+                <ion-col class="day">13</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="day">14</ion-col>
+                <ion-col class="day">15</ion-col>
+                <ion-col class="day">16</ion-col>
+                <ion-col class="day">17</ion-col>
+                <ion-col class="day">18</ion-col>
+                <ion-col class="day">19</ion-col>
+                <ion-col class="day">20</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="day">21</ion-col>
+                <ion-col class="day">22</ion-col>
+                <ion-col class="day">23</ion-col>
+                <ion-col class="day">24</ion-col>
+                <ion-col class="day">25</ion-col>
+                <ion-col class="day">26</ion-col>
+                <ion-col class="day">27</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col class="day">28</ion-col>
+                <ion-col class="day">29</ion-col>
+                <ion-col class="day">30</ion-col>
+                <ion-col class="day">31</ion-col>
+                <ion-col class="dayUnhighlight">1</ion-col>
+                <ion-col class="dayUnhighlight">2</ion-col>
+                <ion-col class="dayUnhighlight">3</ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-content>
+                <ion-fab vertical="top" horizontal="end" slot="fixed">
+                    <ion-fab-button>
+                        <ion-icon name="add" class="addButton"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab>
+        </ion-content>
+    </div>
+    <div class="navbar">
+        <a href="../home/home.html">
+            <ion-icon name="home" size="large" class="app-icon"></ion-icon>
+        </a>
+    </div>
+</body>
+
+</html>
