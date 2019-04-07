@@ -40,21 +40,7 @@ ion-slides {
 }
 
 #widgets {
-    height: 70%;
-}
-
-#app-list {
-    margin-top: 5%;
-    height: 10%;
-    overflow: scroll;
-    white-space: nowrap;
-    
-}
-
-.app-icon {
-    margin-top: 5%;
-    margin-left: 3%;
-    margin-right: 3%;
+    height: 80%;
 }
 
 #weather-icon {
@@ -87,7 +73,7 @@ ion-slides {
 #FridgeControl {
     display: flex;
     justify-content: space-evenly;
-    margin: 7%;
+    margin: 5%;
 }
 
 #preset {
