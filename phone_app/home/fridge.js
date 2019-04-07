@@ -4,7 +4,7 @@ var oldHumid;
 var temp;
 var humid;
 
-async function createModal(evnt) {
+async function createCompartmentModal(evnt) {
     // initialize controller
     const modalController = document.querySelector('ion-modal-controller');
     await modalController.componentOnReady();
@@ -125,8 +125,8 @@ async function createModal(evnt) {
     });
     return modalElement;
   }
-  async function presentModal(evnt) {
-    const modal = await createModal(evnt);
+  async function presentCompartmentModal(evnt) {
+    const modal = await createCompartmentModal(evnt);
     await modal.present();
   }
 
