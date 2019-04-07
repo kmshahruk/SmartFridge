@@ -92,7 +92,31 @@ class AddNoteModal extends HTMLElement {
             console.log(texture)
 
 
-            
+            document.querySelector('#grid').innerHTML += `                        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>Card Title</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                        Keep close to Nature's heart... and break clear away, once in awhile,
+                        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>Shopping List</ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        - EGG x 1<br>
+                        - BREAD x 2<BR>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>`
             await document.querySelector('ion-modal-controller').dismiss();
         });
     }
