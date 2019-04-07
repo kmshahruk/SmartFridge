@@ -11,7 +11,8 @@
     <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <link rel="stylesheet" href="home.css">
-    <script src="home.js"></script>
+    <script src="../custom-elements/FridgeModal.js"></script>
+    <script src="fridge.js"></script>
 </head>
 
 <body>
@@ -26,31 +27,28 @@
                 </ion-header>
            
 
-                <div id ="compartment">
+                <div id ="compartmentGrid">
                 <ion-grid>
                     <ion-row>
                            
-                        <ion-col class="compartment" id ="c1" onclick="presentModal()"></ion-col>
-                        <script>
-                                var compartment = {
-                                  temp:"75",
-                                  humid:"40",
-                                };
-                                
-                                document.getElementById("c1").innerHTML = "Tempature: " + compartment.temp + " Humidity: " + compartment.humid;
-                        </script>
-                        <ion-col class="compartment">75°F</ion-col>
-                        <ion-col class="compartment">75°F</ion-col>
+                        <ion-col class="compartment" id ="1" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="2" onclick="presentModal(this)">Tempature: <br>73°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="3" onclick="presentModal(this)">Tempature: <br>72°F <br><br>Humidity: <br>45%</ion-col>
+
                     </ion-row>
                     <ion-row>
-                        <ion-col class="compartment">75°F</ion-col>
-                        <ion-col class="compartment">75°F</ion-col>
-                        <ion-col class="compartment">75°F</ion-col>
+
+                        <ion-col class="compartment" id ="4" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="5" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="6" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+
                     </ion-row>
                     <ion-row>
-                        <ion-col class="compartment">75°F</ion-col>
-                        <ion-col class="compartment">75°F</ion-col>
-                        <ion-col class="compartment">75°F</ion-col>
+
+                        <ion-col class="compartment" id ="7" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="8" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="9" onclick="presentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+
                     </ion-row>
                 </ion-grid>
             </div>

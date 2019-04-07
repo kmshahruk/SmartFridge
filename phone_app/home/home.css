@@ -1,7 +1,7 @@
 .compartment {
     text-align: center;
     border: 2px solid #0599ee;
-    height: 190px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,4 +19,32 @@
     border-color: #004E89;
     color: white;
 }
+
+#fridgeContainer {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+#controls > div {
+    width: 50%;
+}
+
+#presets {
+    text-align: center; 
+}
+
+#presets > ion-button {
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 40%;
+}
+
 
