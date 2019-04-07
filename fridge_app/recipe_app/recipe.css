@@ -1,23 +1,7 @@
-
-#app-list {
-    margin-top: 5%;
-    height: 10%;
-    overflow: scroll;
-    white-space: nowrap;
-    position: absolute;
-    top: 90%;
-    z-index: 10;
-    
-}
-
-.app-icon {
-    margin-top: 5%;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
 .subtitle {
     padding-left: 3%;
+    font-size: 30px;
+    font-weight: 700;
 }
 #arrow {
     padding-left: 3%;
