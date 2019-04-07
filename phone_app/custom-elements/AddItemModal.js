@@ -1,6 +1,7 @@
 class AddItemModal extends HTMLElement {
     async connectedCallback() {
         this.innerHTML = `
+        <ion-alert-controller></ion-alert-controller>
         <ion-header>
             <ion-toolbar>
                 <ion-buttons slot="start">
@@ -44,10 +45,27 @@ class AddItemModal extends HTMLElement {
         document.querySelector('#done').addEventListener('click', async () => {
             var name = document.querySelector('#name').value
             var quantity = document.querySelector('#quantity').value
-            document.getElementById(this.listName).innerHTML += '<ion-item-sliding><ion-item><ion-label><h3>' + name + '</h3></ion-label><p slot="end" id="test">' + quantity + '</p></ion-item><ion-item-options><ion-item-option>Favorite</ion-item-option></ion-item-options></ion-item-sliding>'
-            await document.querySelector('ion-modal-controller').dismiss();
 
+            if(name.trim() != "" && quantity.trim() != "") {
+                document.getElementById(this.listName).innerHTML += '<ion-item-sliding><ion-item><ion-label><h3>' + name + '</h3></ion-label><p slot="end" id="test">' + quantity + '</p></ion-item><ion-item-options><ion-item-option>Favorite</ion-item-option></ion-item-options></ion-item-sliding>'
+                await document.querySelector('ion-modal-controller').dismiss();
+            } else {
+                presentAlert()
+            }
             
         });
+
+        async function presentAlert() {
+            const alertController = document.querySelector('ion-alert-controller')
+            await alertController.componentOnReady()
+
+            const alert = await alertController.create({
+                header: 'Error',
+                message: 'Please fill out all fields',
+                buttons: ['OK']
+            })
+
+            return await alert.present()
+        }
     }
 }
