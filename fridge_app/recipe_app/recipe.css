@@ -1,0 +1,13 @@
+.subtitle {
+    padding-left: 3%;
+    font-size: 30px;
+    font-weight: 700;
+}
+#arrow {
+    padding-left: 3%;
+    padding-top: 3%;
+}
+
+img {
+    width: 50vw !important;
+}
