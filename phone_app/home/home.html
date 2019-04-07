@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Phone App</title>
 
@@ -11,6 +11,7 @@
     <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script src="../custom-elements/AddItemModal.js"></script>
+    <script src="../custom-elements/AddNoteModal.js"></script>
     <script src="home.js"></script>
     <link rel="stylesheet" href="home.css">
 </head>
@@ -38,9 +39,49 @@
                     <ion-toolbar>
                         <ion-title>Notes</ion-title>
                     </ion-toolbar>
+
+                    <ion-searchbar></ion-searchbar>
                 </ion-header>
 
-                <ion-searchbar></ion-searchbar>
+                <ion-content>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col>
+                                <ion-card>
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                    </ion-card-header>
+                                    <ion-card-content>
+                                        Keep close to Nature's heart... and break clear away, once in awhile,
+                                        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col>
+                                <ion-card>
+                                    <ion-card-header>
+                                        <ion-card-title>Shopping List</ion-card-title>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        - EGG x 1<br>
+                                        - BREAD x 2<BR>
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-content>
+
+                <ion-fab vertical="bottom" horizontal="end">
+                    <ion-fab-button>
+                        <ion-icon name="add"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-list side="top">
+                            <ion-fab-button onclick="createNote(false)"><ion-icon name="create"></ion-icon></ion-fab-button>
+                            <ion-fab-button onclick="createNote(true)"><ion-icon name="brush"></ion-icon></ion-fab-button>
+                    </ion-fab-list>
+                </ion-fab>
             </ion-tab>
 
             <ion-tab tab="inventory">
