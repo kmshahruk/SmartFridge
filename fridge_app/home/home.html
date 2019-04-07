@@ -25,6 +25,87 @@
 
                 <ion-slide>
                     <div class="page" id="page1">
+                        <ion-header>
+                            <ion-toolbar>
+                                <ion-title>Refrigerator Control</ion-title>
+                            </ion-toolbar>
+                        </ion-header>
+
+                        <div id="compartments">
+                            <h3>Compartments</h3>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p> Temperature: 15°F </p>
+                                        <p> Humidity: 705% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                    <ion-col class="compartment" onclick="selectCompartment(this)">
+                                        <p>Temperature: 10°F </p>
+                                        <p> Humidity: 20% </p>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </div>
+                        <div id="FridgeControl">
+                                <div id="HumidityControl">
+                                    <h3>Humidity  Control</h3>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrHumidity(this)"></ion-icon>
+                                    <p id="humidityNumber">Select a Compartment</p>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrHumidity(this)"></ion-icon>
+                                </div>
+                                <div id="TemperatureControl">
+                                    <h3>Temperature Control</h3>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrTemp(this)"></ion-icon>
+                                    <p id="temperatureNumber">Select a Compartment</p>
+                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrTemp(this)"></ion-icon>
+                                </div>
+   
+                        </div>
+                        <div id="preset">
+                                <ion-button shape="round" fill="outline" onclick="vegetablePreset()">Vegetable</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="drinkPreset()">Drink</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="meatPreset()">Meat</ion-button>
+                                <ion-button shape="round" fill="outline" onclick="fruitPreset()">Fruit</ion-button>
+                        </div>
+                    </div> 
+
+                    </div>
+                </ion-slide>
+
+                <ion-slide>
+                    <div class="page" id="page2">
                         <div id="header">
                             <div class="left-margin">
                                 <ion-icon name="cloudy-night" size="large" id="weather-icon"></ion-icon>
@@ -159,10 +240,12 @@
                         </ion-content>
 
                         <ion-content scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
-                            <a href="../calendar_app/calendar.html">
+                            <a href ="../calendar_app/calendar.html">
                                 <ion-icon name="calendar" size="large" class="app-icon"></ion-icon>
                             </a>
-                            <ion-icon name="logo-apple" size="large" class="app-icon"></ion-icon>
+                            <a href="../recipe_app/recipe.html">
+                                <ion-icon name="restaurant" size="large" class="app-icon"></ion-icon>
+                            </a>
                             <ion-icon name="logo-bitbucket" size="large" class="app-icon"></ion-icon>
                             <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
                             <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
@@ -171,91 +254,6 @@
                             <ion-icon name="logo-skype" size="large" class="app-icon"></ion-icon>
                             <ion-icon name="logo-usd" size="large" class="app-icon"></ion-icon>
                         </ion-content>
-                    </div>
-                </ion-slide>
-
-                <ion-slide>
-                    <div class="page" id="page2">
-                        <ion-header>
-                            <ion-toolbar>
-                                <ion-title>Refrigerator Control</ion-title>
-                            </ion-toolbar>
-                        </ion-header>
-
-                        <div id="compartments">
-                            <h3>Compartments</h3>
-                            <ion-grid>
-                                <ion-row>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p> Temperature: 15°F </p>
-                                        <p> Humidity: 705% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                </ion-row>
-                                <ion-row>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                </ion-row>
-                                <ion-row>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                    <ion-col class="compartment" onclick="selectCompartment(this)">
-                                        <p>Temperature: 10°F </p>
-                                        <p> Humidity: 20% </p>
-                                    </ion-col>
-                                </ion-row>
-                            </ion-grid>
-                        </div>
-                        <div id="FridgeControl">
-                            <div id="HumidityControl">
-                                <h3>Humidity Control</h3>
-                                <ion-icon size="large" class="arrow" name="arrow-dropup-circle"
-                                    onclick="incrHumidity(this)"></ion-icon>
-                                <p id="humidityNumber">Select a Compartment</p>
-                                <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"
-                                    onclick="decrHumidity(this)"></ion-icon>
-                            </div>
-                            <div id="TemperatureControl">
-                                <h3>Temperature Control</h3>
-                                <ion-icon size="large" class="arrow" name="arrow-dropup-circle"
-                                    onclick="incrTemp(this)"></ion-icon>
-                                <p id="temperatureNumber">Select a Compartment</p>
-                                <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"
-                                    onclick="decrTemp(this)"></ion-icon>
-                            </div>
-
-                        </div>
-                        <div id="preset">
-                            <ion-button shape="round" fill="outline" onclick="vegetablePreset()">Vegetable</ion-button>
-                            <ion-button shape="round" fill="outline" onclick="drinkPreset()">Drink</ion-button>
-                            <ion-button shape="round" fill="outline" onclick="meatPreset()">Meat</ion-button>
-                            <ion-button shape="round" fill="outline" onclick="fruitPreset()">Fruit</ion-button>
-                        </div>
-                    </div>
-
                     </div>
                 </ion-slide>
             </ion-slides>

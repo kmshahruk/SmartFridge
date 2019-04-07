@@ -1,0 +1,24 @@
+
+#app-list {
+    margin-top: 5%;
+    height: 100px;
+    overflow: scroll;
+    white-space: nowrap;
+} 
+
+.app-icon {
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 100%;
+    width: 30%;
+    border-color: red;
+}
+
+.subtitle {
+    padding-left: 3%;
+}
+#arrow {
+    padding-left: 3%;
+    padding-top: 3%;
+}
