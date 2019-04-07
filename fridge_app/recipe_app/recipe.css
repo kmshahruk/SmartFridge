@@ -1,18 +1,19 @@
 
 #app-list {
     margin-top: 5%;
-    height: 100px;
+    height: 10%;
     overflow: scroll;
     white-space: nowrap;
-} 
+    position: absolute;
+    top: 90%;
+    z-index: 10;
+    
+}
 
 .app-icon {
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: 3%;
     margin-right: 3%;
-    height: 100%;
-    width: 30%;
-    border-color: red;
 }
 
 .subtitle {
