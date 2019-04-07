@@ -22,3 +22,7 @@
     padding-left: 3%;
     padding-top: 3%;
 }
+
+img {
+    width: 50vw !important;
+}
