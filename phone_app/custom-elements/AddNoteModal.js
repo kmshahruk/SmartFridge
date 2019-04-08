@@ -19,9 +19,9 @@ class AddNoteModal extends HTMLElement {
             </ion-toolbar>
         </ion-header>
     
-        <ion-content>
+        <ion-content force-overscroll="false">
            <canvas id="canvas"></canvas>
-           <ion-textarea rows="500" id="text"></ion-textarea>
+           <ion-textarea rows="25" id="text"></ion-textarea>
             
         </ion-content>
         `;
@@ -84,39 +84,41 @@ class AddNoteModal extends HTMLElement {
         });
 
         document.querySelector('#done').addEventListener('click', async () => {
-            console.log("sa")
             var text = document.querySelector('#text').value
             var canvas = document.querySelector('#canvas')
-            var texture = canvas.getContext('2d').getImageData(0, 0, canvas.width, canvas.height)
-            console.log(text)
-            console.log(texture)
 
+            var prev =  document.querySelector('#grid').innerHTML
 
-            document.querySelector('#grid').innerHTML += `                        <ion-row>
-            <ion-col>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title>Card Title</ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                        Keep close to Nature's heart... and break clear away, once in awhile,
-                        and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title>Shopping List</ion-card-title>
-                    </ion-card-header>
+            if (this.canvas) {
+                var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 
-                    <ion-card-content>
-                        - EGG x 1<br>
-                        - BREAD x 2<BR>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-        </ion-row>`
+                document.querySelector('#grid').innerHTML = `
+                <ion-row>
+                <ion-col size="6">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-subtitle>Card Title</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content><img src="` + image +
+                        `"/></ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>` + prev
+            } else {
+                document.querySelector('#grid').innerHTML = `
+                <ion-row>
+                <ion-col size="6">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-subtitle>Card Title</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>` + text +
+                        `</ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>` + prev
+            }
+            
             await document.querySelector('ion-modal-controller').dismiss();
         });
     }
