@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fridge App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../fridge.css">
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Setting</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Wifi</ion-label>
+                    <ion-select value="light">
+                        <ion-select-option value="light">Light</ion-select-option>
+                        <ion-select-option value="dark">Dark</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Bluetooth</ion-label>
+                    <ion-select value="f">
+                        <ion-select-option value="f">Fahrenheit</ion-select-option>
+                        <ion-select-option value="c">Celcius</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Theme</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Date and Time</ion-label>
+                    <ion-select value="f">
+                        <ion-select-option value="f">Fahrenheit</ion-select-option>
+                        <ion-select-option value="c">Celcius</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Online Manual</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>About Device</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Factory Data Reset</ion-label>
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+    </ion-app>
+</body>
+
+</html>
