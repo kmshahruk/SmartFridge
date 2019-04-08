@@ -15,6 +15,8 @@
     <script src="../custom-elements/AddItemModal.js"></script>
     <script src="../custom-elements/AddNoteModal.js"></script>
     <script src="home.js"></script>
+    <script src="notes.js"></script>
+    <script src="inventory.js"></script>
 </head>
 
 <body>
@@ -124,7 +126,7 @@
                                 <ion-label>
                                     Fruits
                                 </ion-label>
-                                <ion-button onclick="presentModal(this)" fill="clear" id="fruits">
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits">
                                     <ion-icon name="add" size="large"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
@@ -164,7 +166,7 @@
                                     Vegetables
                                 </ion-label>
 
-                                <ion-button onclick="presentModal(this)" fill="clear" id="vegetable">
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable">
                                     <ion-icon name="add" size="large"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
@@ -201,7 +203,7 @@
                         </ion-list>
                     </div>
 
-                    <ion-button onclick="presentPrompt()" fill="clear" id="vegetable">
+                    <ion-button onclick="presentCategoryPrompt()" fill="clear" id="vegetable">
                         Add Category
                     </ion-button>
                 </ion-content>
