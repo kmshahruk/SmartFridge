@@ -80,4 +80,5 @@ ion-card-content > textarea {
     max-height: 100px;
     width: 100%;
     overflow: hidden;
+    resize: none;
 }
