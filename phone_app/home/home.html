@@ -31,33 +31,42 @@
                         <ion-title>Home</ion-title>
                     </ion-toolbar>
                 </ion-header>
-           
 
-                <div id ="compartmentGrid">
-                <ion-grid>
-                    <ion-row>
-                           
-                        <ion-col class="compartment" id ="1" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="2" onclick="presentCompartmentModal(this)">Tempature: <br>73°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="3" onclick="presentCompartmentModal(this)">Tempature: <br>72°F <br><br>Humidity: <br>45%</ion-col>
 
-                    </ion-row>
-                    <ion-row>
+                <div id="compartmentGrid">
+                    <ion-grid>
+                        <ion-row>
 
-                        <ion-col class="compartment" id ="4" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="5" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="6" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="1" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="2" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>73°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="3" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>72°F <br><br>Humidity: <br>45%</ion-col>
 
-                    </ion-row>
-                    <ion-row>
+                        </ion-row>
+                        <ion-row>
 
-                        <ion-col class="compartment" id ="7" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="8" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="9" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="4" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="5" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="6" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
 
-                    </ion-row>
-                </ion-grid>
-            </div>
+                        </ion-row>
+                        <ion-row>
+
+                            <ion-col class="compartment" id="7" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="8" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                            <ion-col class="compartment" id="9" onclick="presentCompartmentModal(this)">Tempature:
+                                <br>75°F <br><br>Humidity: <br>40%</ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+                </div>
 
             </ion-tab>
 
@@ -78,7 +87,10 @@
                                     <ion-card-header>
                                         <ion-card-subtitle>Card Title</ion-card-subtitle>
                                     </ion-card-header>
-                                    <ion-card-content>Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.</ion-card-content>
+                                    <ion-card-content>
+                                        <textarea rows=20
+                                            disabled>Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.</textarea>
+                                    </ion-card-content>
                                 </ion-card>
                             </ion-col>
                             <ion-col class="noteCol" size="6">
@@ -88,8 +100,7 @@
                                     </ion-card-header>
 
                                     <ion-card-content>
-                                        - EGG x 1<br>
-                                        - BREAD x 2<BR>
+                                        <textarea rows=5 disabled>- EGG x 1&#013;&#010;- BREAD x 2</textarea>
                                     </ion-card-content>
                                 </ion-card>
                             </ion-col>
@@ -102,8 +113,12 @@
                         <ion-icon name="add"></ion-icon>
                     </ion-fab-button>
                     <ion-fab-list side="top">
-                            <ion-fab-button onclick="createNote(false)"><ion-icon name="create"></ion-icon></ion-fab-button>
-                            <ion-fab-button onclick="createNote(true)"><ion-icon name="brush"></ion-icon></ion-fab-button>
+                        <ion-fab-button onclick="createNote(false)">
+                            <ion-icon name="create"></ion-icon>
+                        </ion-fab-button>
+                        <ion-fab-button onclick="createNote(true)">
+                            <ion-icon name="brush"></ion-icon>
+                        </ion-fab-button>
                     </ion-fab-list>
                 </ion-fab>
             </ion-tab>

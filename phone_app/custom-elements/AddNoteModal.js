@@ -122,8 +122,10 @@ class AddNoteModal extends HTMLElement {
                             <ion-card-header>
                                 <ion-card-subtitle>Card Title</ion-card-subtitle>
                             </ion-card-header>
-                            <ion-card-content>` + text +
-                            `</ion-card-content>
+                            <ion-card-content>
+                            <textarea rows=20 disabled>` + text +
+                            `</textarea>
+                            </ion-card-content>
                         </ion-card>
                     </ion-col>` + prev
                 }

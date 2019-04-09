@@ -21,7 +21,8 @@ async function editNoteModal(item, canvas) {
   if (canvas) {
     content = item.querySelector('img').src
   } else {
-    content = item.querySelector('ion-card-content').textContent
+    content = item.querySelector('textarea').innerHTML;
+    console.log(content)
   }
 
   const modalController = document.querySelector('ion-modal-controller');
@@ -54,7 +55,7 @@ async function editNote(item, canvas) {
       if (canvas) {
         item.querySelector('img').src = data["data"]
       } else {
-        item.querySelector('ion-card-content').innerHTML = data["data"]
+        item.querySelector('textarea').innerHTML = data["data"]
       }
     }
   })

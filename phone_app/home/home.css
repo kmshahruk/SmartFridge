@@ -55,7 +55,7 @@ ion-list-header > ion-label {
 
 .note {
     margin: unset !important;
-    height: 100%;
+    height: 300px;
 }
 
 .note > ion-card-content > img {
@@ -74,4 +74,10 @@ ion-list-header > ion-label {
 
 .noteCol {
     height: 300px !important; 
+}
+
+ion-card-content > textarea {
+    max-height: 200px;
+    width: 100%;
+    overflow: hidden;
 }
