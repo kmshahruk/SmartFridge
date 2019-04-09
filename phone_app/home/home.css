@@ -54,5 +54,9 @@ ion-list-header > ion-label {
 }
 
 .note {
-    height: 50%;
+    height: 70%;
+}
+
+#text {
+    margin: 5%;
 }

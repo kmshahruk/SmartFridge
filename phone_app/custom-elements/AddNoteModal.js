@@ -87,36 +87,32 @@ class AddNoteModal extends HTMLElement {
             var text = document.querySelector('#text').value
             var canvas = document.querySelector('#canvas')
 
-            var prev =  document.querySelector('#grid').innerHTML
+            var prev =  document.querySelector('#notesRow').innerHTML
 
             if (this.canvas) {
                 var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 
-                document.querySelector('#grid').innerHTML = `
-                <ion-row>
+                document.querySelector('#notesRow').innerHTML = `
                 <ion-col size="6">
-                    <ion-card>
+                    <ion-card class="note">
                         <ion-card-header>
                             <ion-card-subtitle>Card Title</ion-card-subtitle>
                         </ion-card-header>
                         <ion-card-content><img src="` + image +
                         `"/></ion-card-content>
                     </ion-card>
-                </ion-col>
-            </ion-row>` + prev
+                </ion-col>` + prev
             } else {
-                document.querySelector('#grid').innerHTML = `
-                <ion-row>
+                document.querySelector('#notesRow').innerHTML = `
                 <ion-col size="6">
-                    <ion-card>
+                    <ion-card class="note">
                         <ion-card-header>
                             <ion-card-subtitle>Card Title</ion-card-subtitle>
                         </ion-card-header>
                         <ion-card-content>` + text +
                         `</ion-card-content>
                     </ion-card>
-                </ion-col>
-            </ion-row>` + prev
+                </ion-col>` + prev
             }
             
             await document.querySelector('ion-modal-controller').dismiss();
