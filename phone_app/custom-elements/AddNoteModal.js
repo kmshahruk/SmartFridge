@@ -26,6 +26,11 @@ class AddNoteModal extends HTMLElement {
         </ion-content>
         `;
 
+        if (this.content) {
+            document.querySelector('ion-textarea').value = this.content
+        }
+        
+
         var canvas = document.querySelector('canvas');
         var input = document.querySelector('ion-textarea')
 
@@ -89,33 +94,36 @@ class AddNoteModal extends HTMLElement {
 
             var prev =  document.querySelector('#notesRow').innerHTML
 
-            if (this.canvas) {
-                var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
-
-                document.querySelector('#notesRow').innerHTML = `
-                <ion-col size="6">
-                    <ion-card class="note">
-                        <ion-card-header>
-                            <ion-card-subtitle>Card Title</ion-card-subtitle>
-                        </ion-card-header>
-                        <ion-card-content><img src="` + image +
-                        `"/></ion-card-content>
-                    </ion-card>
-                </ion-col>` + prev
-            } else {
-                document.querySelector('#notesRow').innerHTML = `
-                <ion-col size="6">
-                    <ion-card class="note">
-                        <ion-card-header>
-                            <ion-card-subtitle>Card Title</ion-card-subtitle>
-                        </ion-card-header>
-                        <ion-card-content>` + text +
-                        `</ion-card-content>
-                    </ion-card>
-                </ion-col>` + prev
+            if (!this.content) {
+                if (this.canvas) {
+                    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+    
+                    document.querySelector('#notesRow').innerHTML = `
+                    <ion-col size="6">
+                        <ion-card class="note" onClick="onImageNoteClick(this)">
+                            <ion-card-header>
+                                <ion-card-subtitle>Card Title</ion-card-subtitle>
+                            </ion-card-header>
+                            <ion-card-content><img src="` + image +
+                            `"/></ion-card-content>
+                        </ion-card>
+                    </ion-col>` + prev
+                } else {
+                    document.querySelector('#notesRow').innerHTML = `
+                    <ion-col size="6">
+                        <ion-card class="note" onClick="onTextNoteClick(this)">
+                            <ion-card-header>
+                                <ion-card-subtitle>Card Title</ion-card-subtitle>
+                            </ion-card-header>
+                            <ion-card-content>` + text +
+                            `</ion-card-content>
+                        </ion-card>
+                    </ion-col>` + prev
+                }
             }
             
-            await document.querySelector('ion-modal-controller').dismiss();
+            
+            await document.querySelector('ion-modal-controller').dismiss(text);
         });
     }
 }
