@@ -54,9 +54,24 @@ ion-list-header > ion-label {
 }
 
 .note {
-    height: 70%;
+    margin: unset !important;
+    height: 100%;
+}
+
+.note > ion-card-content > img {
+    height: 200px;
+    object-fit: contain;
 }
 
 #text {
+    width: 90%;
     margin: 5%;
+}
+
+#text > textarea {
+    padding: 0px !important;
+}
+
+.noteCol {
+    height: 300px !important; 
 }
