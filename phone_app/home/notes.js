@@ -15,8 +15,14 @@ async function createNoteModal(drawnNote) {
   return modalElement;
 }
 
-async function editNoteModal(item) {
-  var text = item.querySelector('ion-card-content').textContent
+async function editNoteModal(item, canvas) {
+  var content;
+
+  if (canvas) {
+    content = item.querySelector('img').src
+  } else {
+    content = item.querySelector('ion-card-content').textContent
+  }
 
   const modalController = document.querySelector('ion-modal-controller');
   await modalController.componentOnReady();
@@ -25,8 +31,8 @@ async function editNoteModal(item) {
   const modalElement = await modalController.create({
     component: 'add-note',
     componentProps: {
-      'canvas' : false,
-      'content': text
+      'canvas': canvas,
+      'content': content
     }
   });
 
@@ -39,24 +45,29 @@ async function createNote(drawnNote) {
   await modal.present();
 }
 
-async function editNote(item) {
-  const modal = await editNoteModal(item);
+async function editNote(item, canvas) {
+  const modal = await editNoteModal(item, canvas);
 
   modal.onDidDismiss().then(data => {
     console.log(data)
     if (data["data"]) {
-      item.querySelector('ion-card-content').innerHTML = data["data"]
+      if (canvas) {
+        item.querySelector('img').src = data["data"]
+      } else {
+        item.querySelector('ion-card-content').innerHTML = data["data"]
+      }
     }
   })
-  
+
   await modal.present();
 }
 
-function onImageNoteClick() {
+function onImageNoteClick(item) {
+  editNote(item, true)
   console.log("onImageNOteClick")
 }
 
 function onTextNoteClick(item) {
-  editNote(item)
+  editNote(item, false)
   console.log("onTextNoteClick")
 }

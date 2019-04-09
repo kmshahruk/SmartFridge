@@ -26,13 +26,13 @@ class AddNoteModal extends HTMLElement {
         </ion-content>
         `;
 
-        if (this.content) {
-            document.querySelector('ion-textarea').value = this.content
-        }
-        
-
         var canvas = document.querySelector('canvas');
         var input = document.querySelector('ion-textarea')
+
+        console.log(this.canvas)
+        if (this.content && !this.canvas) {
+            input.value = this.content
+        }
 
         if (this.canvas) {
             input.style.display = "none"
@@ -43,6 +43,12 @@ class AddNoteModal extends HTMLElement {
             // get canvas 2D context and set him correct size
             var ctx = canvas.getContext('2d');
             resize();
+
+            if (this.content) {
+                var image = new Image()
+                image.src = this.content
+                ctx.drawImage(image, 0, 0, window.innerWidth, window.innerHeight)
+            }
     
             // last known position
             var pos = { x: 0, y: 0 };
@@ -93,6 +99,7 @@ class AddNoteModal extends HTMLElement {
             var canvas = document.querySelector('#canvas')
 
             var prev =  document.querySelector('#notesRow').innerHTML
+            var data;
 
             if (!this.content) {
                 if (this.canvas) {
@@ -122,8 +129,13 @@ class AddNoteModal extends HTMLElement {
                 }
             }
             
+            if (this.canvas) {
+                data = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+            } else {
+                data = text
+            }
             
-            await document.querySelector('ion-modal-controller').dismiss(text);
+            await document.querySelector('ion-modal-controller').dismiss(data);
         });
     }
 }
