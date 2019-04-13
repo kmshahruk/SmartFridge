@@ -82,3 +82,7 @@ ion-card-content > textarea {
     overflow: hidden;
     resize: none;
 }
+
+ion-item > ion-icon {
+    margin-right: 10px !important;
+}

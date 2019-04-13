@@ -1,5 +1,8 @@
 customElements.define('add-item', AddItemModal)
 
+function onItemClick(item) {
+  editItem(item)
+}
 
 function addItem() {
   presentItemModal()
@@ -16,6 +19,28 @@ async function createItemModal(listName) {
     component: 'add-item',
     componentProps: {
       'listName': listName + "List"
+    }
+  });
+
+  return modalElement;
+}
+
+async function editItem(item) {
+  console.log(item.attributes.expiration.value)
+  console.log(item.querySelector("p").innerHTML)
+  // const modal = await editItemModal();
+
+}
+
+async function editItemModal(item) {
+  const modalController = document.querySelector('ion-modal-controller');
+  await modalController.componentOnReady();
+
+  // present the modal
+  const modalElement = await modalController.create({
+    component: 'add-item',
+    componentProps: {
+
     }
   });
 

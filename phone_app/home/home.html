@@ -138,12 +138,13 @@
                                 <ion-label>
                                     Fruits
                                 </ion-label>
-                                <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits">
-                                    <ion-icon name="add" size="large"></ion-icon>
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits" class="addButton">
+                                    <ion-icon name="add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
                             <ion-item-sliding>
                                 <ion-item>
+                                    <ion-icon name="alert" color="warning" slot="start" size="small"></ion-icon>
                                     <ion-label>
                                         <h3>Grapes</h3>
                                     </ion-label>
@@ -158,6 +159,7 @@
 
                             <ion-item-sliding>
                                 <ion-item>
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
                                     <ion-label>
                                         <h3>Apples</h3>
                                     </ion-label>
@@ -178,13 +180,14 @@
                                     Vegetables
                                 </ion-label>
 
-                                <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable">
-                                    <ion-icon name="add" size="large"></ion-icon>
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable" class="addButton">
+                                    <ion-icon name="add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
 
                             <ion-item-sliding>
-                                <ion-item>
+                                <ion-item onclick="onItemClick(this)" expiration="123">
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
                                     <ion-label>
                                         <h3>Carrots</h3>
                                     </ion-label>
@@ -200,6 +203,7 @@
 
                             <ion-item-sliding>
                                 <ion-item>
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
                                     <ion-label>
                                         <h3>Celery</h3>
                                     </ion-label>
