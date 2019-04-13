@@ -12,9 +12,8 @@ function addItem(item){
                     </ion-item-options>
 
                     <ion-item onclick=onShoppingItemClick(this) quantity="0">
-                        <p class="shoppingItemName">`
-                            + a + `
-                        </p>
+                        <p class="shoppingListName">`+ a + `</p>
+                        <p slot="end" class="shoppingListQuantity"></p>
                     </ion-item> 
                     
                 </ion-item-sliding>`
@@ -40,8 +39,15 @@ async function editShoppingItem(item) {
       if (data["data"]) {
         console.log("data is: ")
         console.log(data["data"])
-            item.innerHTML = data["data"]["name"]
+            item.querySelector(".shoppingListName").innerHTML = data["data"]["name"]
             item.attributes.quantity.value = data["data"]["quantity"]
+
+            if (parseInt(data["data"]["quantity"]) > 0) {
+                item.querySelector(".shoppingListQuantity").innerHTML = "Qty: " + data["data"]["quantity"]
+            } else {
+                item.querySelector(".shoppingListQuantity").innerHTML = ""
+            }
+            
       }
     })
   
@@ -54,11 +60,11 @@ async function editShoppingItemModal(item) {
     await modalController.componentOnReady();
 
     console.log("title is: ")
-    // console.log(item.querySelector("#shoppingItemName").innerHTML)
+    console.log(item.innerHTML)
     console.log(item.attributes.quantity.value)
     //content = item.querySelector('ion-item').innerHTML;
 
-    var content = item.querySelector(".shoppingItemName").innerHTML
+    var content = item.querySelector(".shoppingListName").innerHTML
     // present the modal
     const modalElement = await modalController.create({
         component: 'add-shopping-item',
