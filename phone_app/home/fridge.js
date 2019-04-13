@@ -11,8 +11,10 @@ async function createCompartmentModal(evnt) {
     // create component to open
     currentCompartment = evnt;
     var h = evnt.innerHTML.toString().match(/\d+/g);
-    temp = parseInt(h[0]);
-    humid = parseInt(h[1]);
+    temp = parseInt(h[1]);
+    humid = parseInt(h[2]);
+    console.log(temp);
+    console.log(humid);
     oldTemp =  temp;
     oldHumid = humid;
   
@@ -73,7 +75,8 @@ async function createCompartmentModal(evnt) {
       document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
       document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
 
-      currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+      // currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 
     });
     element.querySelector('#Drink').addEventListener('click', () => {
@@ -83,7 +86,7 @@ async function createCompartmentModal(evnt) {
       document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
       document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
 
-      currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 
     });
     element.querySelector('#Meat').addEventListener('click', () => {
@@ -93,7 +96,7 @@ async function createCompartmentModal(evnt) {
       document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
       document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
 
-      currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 
     });
     element.querySelector('#Fruit').addEventListener('click', () => {
@@ -103,14 +106,14 @@ async function createCompartmentModal(evnt) {
       document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
       document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
 
-      currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 
     });
 
     // listen for close event
     const button = element.querySelector('#cancel');
     button.addEventListener('click', () => {
-      currentCompartment.innerHTML = "Tempature: <br>"+ oldTemp +"°F <br><br>Humidity: <br>"+ oldHumid +"%";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 
       modalController.dismiss();
     });
@@ -133,23 +136,23 @@ async function createCompartmentModal(evnt) {
   function incrHumidity(){  
     humid++
     document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
-    currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+    currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 }
 
 function decrHumidity(){
   humid--
   document.getElementById("humidityNumber").innerHTML = humid.toString() + "%"
-  currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+  currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 }
 
 function incrTemp(){
   temp++
   document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
-  currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+  currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 }
 
 function decrTemp(){
   temp--
   document.getElementById("temperatureNumber").innerHTML = temp.toString() + "°F"
-  currentCompartment.innerHTML = "Tempature: <br>"+ temp +"°F <br><br>Humidity: <br>"+ humid +"%";
+  currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
 }
