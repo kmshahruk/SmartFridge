@@ -178,6 +178,8 @@
                         <ion-list-header>General</ion-list-header>
 
                         <ion-item>
+                            <ion-icon name="color-palette"></ion-icon>
+                            &nbsp;
                             <ion-label>Theme</ion-label>
                             <ion-select value="light" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="light">Light</ion-select-option>
@@ -186,16 +188,32 @@
                         </ion-item>
 
                         <ion-item>
+                            <ion-icon name="thermometer"></ion-icon>
+                            &nbsp;
                             <ion-label>Temperature Unit</ion-label>
                             <ion-select value="f" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="f">Fahrenheit</ion-select-option>
                                 <ion-select-option value="c">Celcius</ion-select-option>
                             </ion-select>
                         </ion-item>
+                    <!-- <a href="../settings/notifications.html">
                         <ion-item>
+                            Notifications
+                        </ion-item>
+                    </a> -->
+                        <ion-item>
+                                <ion-icon name="contact"></ion-icon>
+                                &nbsp;
                                 Account
                         </ion-item>
                         <ion-item>
+                                <ion-icon name="alert"></ion-icon>
+                                &nbsp;
+                                Notification
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="trash"></ion-icon>
+                            &nbsp;
                             Clear Data
                         </ion-item>
 
