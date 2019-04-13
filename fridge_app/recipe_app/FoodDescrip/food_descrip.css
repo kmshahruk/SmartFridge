@@ -12,16 +12,14 @@
     color: black;
     font-size: 17px;
 }
-ion-toolbar{ 
-    height: 70px;
-}
+
 ion-card {
     padding-bottom: 20px;
 }
 #back {
-    text-align: right;
+    text-align: left;
     color:rgb(84, 100, 247);
-    padding-right: 25px;
+    padding-left: 25px;
     
 }
 #button {
