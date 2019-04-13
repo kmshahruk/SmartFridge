@@ -175,11 +175,11 @@
 
                 <ion-content>
                     <ion-list>
-                        <ion-list-header>Single Selection</ion-list-header>
+                        <ion-list-header>General</ion-list-header>
 
                         <ion-item>
                             <ion-label>Theme</ion-label>
-                            <ion-select value="light">
+                            <ion-select value="light" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="light">Light</ion-select-option>
                                 <ion-select-option value="dark">Dark</ion-select-option>
                             </ion-select>
@@ -187,15 +187,21 @@
 
                         <ion-item>
                             <ion-label>Temperature Unit</ion-label>
-                            <ion-select value="f">
+                            <ion-select value="f" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="f">Fahrenheit</ion-select-option>
                                 <ion-select-option value="c">Celcius</ion-select-option>
                             </ion-select>
                         </ion-item>
+                        <ion-item>
+                                Account
+                        </ion-item>
+                        <ion-item>
+                            Clear Data
+                        </ion-item>
 
                     </ion-list>
+                    <ion-button style = "display: block; margin: 0 auto; width: 30%">Log Out</ion-button>
 
-                    <ion-button>Log Out</ion-button>
                 </ion-content>
             </ion-tab>
 

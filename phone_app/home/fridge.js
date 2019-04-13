@@ -27,7 +27,7 @@ async function createCompartmentModal(evnt) {
             Cancel
         </ion-buttons>
 
-        <ion-title>Compartment ` +evnt.id + `</ion-title>
+        <ion-title id= "title">Compartment ` +evnt.id + `</ion-title>
 
         <ion-buttons slot="end" id="done">
             Done
