@@ -26,13 +26,12 @@
             <ion-list>
                 <ion-item>
                     <ion-icon slot="start" name="wifi" size="large"></ion-icon>
-                    <ion-label class="detail">Wifi</ion-label>
-                    <ion-select value="light">
-                        <ion-select-option value="light">Light</ion-select-option>
-                        <ion-select-option value="dark">Dark</ion-select-option>
-                    </ion-select>
+                    <ion-label class="detail">Wifi</ion-label> 
+                    <ion-select value="on">
+                        <ion-select-option value="on">On</ion-select-option>
+                        <ion-select-option value="off">Off </ion-select-option>
+                    </ion-select>                
                 </ion-item>
-
                 <ion-item>
                     <ion-icon slot="start" name="bluetooth" size="large"></ion-icon>
                     <ion-label class="detail">Bluetooth</ion-label>
@@ -61,10 +60,14 @@
                 <ion-item >
                      <ion-icon slot="start" name="time" size="large"></ion-icon>
                     <ion-label class="detail">Date and Time</ion-label>
-                    <ion-select value="f">
-                        <ion-select-option value="f">Fahrenheit</ion-select-option>
-                        <ion-select-option value="c">Celcius</ion-select-option>
-                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-icon slot="start" name="alert" size="large"></ion-icon>
+                    <ion-label class="detail">Notfications</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-icon slot="start" name="volume-high" size="large"></ion-icon>
+                    <ion-label class="detail">Sounds</ion-label>
                 </ion-item>
                 <ion-item>
                     <ion-icon slot="start" name="filing" size="large"></ion-icon>
@@ -103,5 +106,4 @@
         </ion-footer>
     </ion-app>
 </body>
-
 </html>
