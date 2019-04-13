@@ -1,0 +1,7 @@
+.class {
+     min-height: 50rem; /* <- this can be whatever you need */
+}
+
+.item{
+  margin:50px auto;
+}
