@@ -30,13 +30,24 @@ async function createItemModal(listName) {
 }
 
 async function editItem(item) {
-  console.log(item.attributes.expiration.value)
-  console.log(item.querySelector("p").innerHTML)
-  // const modal = await editItemModal();
+  const modal = await editItemModal(item);
 
+  modal.onDidDismiss().then(data => {
+    console.log(data)
+    if (data["data"]) {
+      item.attributes.expiration.value = data["data"]["expiration"]
+      item.getElementsByTagName("p")[0].innerHTML = data["data"]["name"]
+      item.getElementsByTagName("p")[1].innerHTML = data["data"]["quantity"]
+    }
+  })
+
+  await modal.present()
 }
 
 async function editItemModal(item) {
+  console.log(item.attributes.expiration.value)
+  console.log(item.getElementsByTagName("p")[0].innerHTML)
+  console.log(item.getElementsByTagName("p")[1].innerHTML)
   const modalController = document.querySelector('ion-modal-controller');
   await modalController.componentOnReady();
 
@@ -44,7 +55,9 @@ async function editItemModal(item) {
   const modalElement = await modalController.create({
     component: 'add-item',
     componentProps: {
-
+      'expiration': item.attributes.expiration.value,
+      'name': item.getElementsByTagName("p")[0].innerHTML,
+      'quantity': item.getElementsByTagName("p")[1].innerHTML
     }
   });
 
