@@ -8,6 +8,10 @@ function addItem() {
   presentItemModal()
 }
 
+function deleteInventoryItem(item) {
+  item.parentElement.parentElement.style.display = "none";
+}
+
 async function createItemModal(listName) {
   // initialize controller
   const modalController = document.querySelector('ion-modal-controller');
@@ -78,7 +82,11 @@ async function presentCategoryPrompt() {
         handler: (data) => {
           console.log(data.category);
           var name = data.category
-          document.getElementById('lists').innerHTML += '<div id="lists"><ion-list id="' + name.toLowerCase() + 'List"><ion-list-header><ion-label>' + name + '</ion-label><ion-button onclick="presentItemModal(this)" fill="clear" id="' + name.toLowerCase() + '"><ion-icon name="add" size="large"></ion-icon></ion-button></ion-list-header></ion-list></div>'
+          document.getElementById('lists').innerHTML += `<div id="lists"><ion-list id="` 
+          + name.toLowerCase() + `List"><ion-list-header><ion-label>` + name + 
+          `</ion-label><ion-button onclick="presentItemModal(this)" fill="clear" id="`
+           + name.toLowerCase() + 
+           `"><ion-icon name="add" size="large"></ion-icon></ion-button></ion-list-header></ion-list></div>`
         }
       }
     ]

@@ -47,7 +47,12 @@ class AddItemModal extends HTMLElement {
             var quantity = document.querySelector('#quantity').value
 
             if(name.trim() != "" && quantity.trim() != "") {
-                document.getElementById(this.listName).innerHTML += '<ion-item-sliding><ion-item><ion-label><h3>' + name + '</h3></ion-label><p slot="end" id="test">' + quantity + '</p></ion-item><ion-item-options><ion-item-option>Favorite</ion-item-option></ion-item-options></ion-item-sliding>'
+                document.getElementById(this.listName).innerHTML += `<ion-item-sliding><ion-item><p>`
+                 + name + `</p><p slot="end" id="test">` + quantity + 
+                 `</p></ion-item><ion-item-options>
+                 <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                 Delete
+                </ion-item-option></ion-item-options></ion-item-sliding>`
                 await document.querySelector('ion-modal-controller').dismiss();
             } else {
                 presentAlert()
