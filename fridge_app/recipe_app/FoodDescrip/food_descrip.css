@@ -1,0 +1,40 @@
+.subtitle {
+    width: 50;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+
+
+}
+.detail {
+    padding-left: 3%;
+    font-weight: 90;
+    color: black;
+    font-size: 17px;
+}
+ion-toolbar{ 
+    height: 70px;
+}
+ion-card {
+    padding-bottom: 20px;
+}
+#back {
+    text-align: right;
+    color:rgb(84, 100, 247);
+    padding-right: 25px;
+    
+}
+#button {
+    text-align: center;
+    padding-left: 38%;
+    vertical-align: middle;
+    margin-top: 20px;
+
+}
+
+.descrip {
+    padding-left: 3%;
+    font-weight: 90;
+    color: black;
+    font-size: 17px;
+}
