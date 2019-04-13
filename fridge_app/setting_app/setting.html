@@ -25,7 +25,8 @@
         <ion-content>
             <ion-list>
                 <ion-item>
-                    <ion-label>Wifi</ion-label>
+                    <ion-icon slot="start" name="wifi" size="large"></ion-icon>
+                    <ion-label class="detail">Wifi</ion-label>
                     <ion-select value="light">
                         <ion-select-option value="light">Light</ion-select-option>
                         <ion-select-option value="dark">Dark</ion-select-option>
@@ -33,34 +34,73 @@
                 </ion-item>
 
                 <ion-item>
-                    <ion-label>Bluetooth</ion-label>
+                    <ion-icon slot="start" name="bluetooth" size="large"></ion-icon>
+                    <ion-label class="detail">Bluetooth</ion-label>
+                    <ion-select value="on">
+                        <ion-select-option value="on">On</ion-select-option>
+                        <ion-select-option value="off">Off </ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-icon slot="start" name="thermometer" size="large"></ion-icon>
+                    <ion-label class="detail">Temperature</ion-label>
+                    <ion-select value="f">
+                        <ion-select-option value="f">Fahrenheit</ion-select-option>
+                        <ion-select-option value="c">Celsius</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-icon slot="start" name="color-palette" size="large"></ion-icon>
+                    <ion-label class="detail">Theme</ion-label>
+                    <ion-select value="light">
+                        <ion-select-option value="light">Light</ion-select-option>
+                        <ion-select-option value="medium">Medium </ion-select-option>
+                        <ion-select-option value="dark">Dark </ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item >
+                     <ion-icon slot="start" name="time" size="large"></ion-icon>
+                    <ion-label class="detail">Date and Time</ion-label>
                     <ion-select value="f">
                         <ion-select-option value="f">Fahrenheit</ion-select-option>
                         <ion-select-option value="c">Celcius</ion-select-option>
                     </ion-select>
                 </ion-item>
                 <ion-item>
-                    <ion-label>Theme</ion-label>
+                    <ion-icon slot="start" name="filing" size="large"></ion-icon>
+                    <ion-label class="detail">Online Manual</ion-label>
                 </ion-item>
                 <ion-item>
-                    <ion-label>Date and Time</ion-label>
-                    <ion-select value="f">
-                        <ion-select-option value="f">Fahrenheit</ion-select-option>
-                        <ion-select-option value="c">Celcius</ion-select-option>
-                    </ion-select>
+                    <ion-icon slot="start" name="cog" size="large"></ion-icon>
+                    <ion-label class="detail">About Device</ion-label>
                 </ion-item>
                 <ion-item>
-                    <ion-label>Online Manual</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>About Device</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Factory Data Reset</ion-label>
+                    <ion-icon slot="start" name="refresh" size="large"></ion-icon>
+                    <ion-label class="detail">Factory Data Reset</ion-label>
                 </ion-item>
             </ion-list>
 
         </ion-content>
+        <ion-footer scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
+            <a href="../home/home.html">
+                <ion-icon name="home" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../calendar_app/calendar.html">
+                <ion-icon name="calendar" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../notes_app/notes.html">
+                <ion-icon name="list-box" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../recipe_app/recipe.html">
+                <ion-icon name="restaurant" size="large" class="app-icon"></ion-icon>
+            </a>
+            <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-skype" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-usd" size="large" class="app-icon"></ion-icon>
+        </ion-footer>
     </ion-app>
 </body>
 
