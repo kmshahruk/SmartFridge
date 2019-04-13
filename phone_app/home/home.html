@@ -14,9 +14,11 @@
     <script src="fridge.js"></script>
     <script src="../custom-elements/AddItemModal.js"></script>
     <script src="../custom-elements/AddNoteModal.js"></script>
+    <script src="../custom-elements/AddShoppingItemModal.js"></script>
     <script src="home.js"></script>
     <script src="notes.js"></script>
     <script src="inventory.js"></script>
+    <script src="shopping.js"></script>
 </head>
 
 <body>
@@ -215,6 +217,27 @@
                 </ion-content>
             </ion-tab>
 
+            <ion-tab tab="shopping list">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-title>Shopping List</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+
+                <ion-content>
+                    <ion-list>
+                        <ion-item>
+                            <ion-icon name="add" onclick="addClicked(this.parentElement)"></ion-icon>
+                            <ion-input onkeypress="enterPressed(event, this.parentElement)"></ion-input>
+                        </ion-item>
+                    </ion-list>
+
+                    <ion-list id="shoppingList">
+
+                    </ion-list>
+                </ion-content>
+            </ion-tab>
+
             <ion-tab tab="settings">
                 <ion-header>
                     <ion-toolbar>
@@ -263,6 +286,11 @@
                 <ion-tab-button tab="inventory">
                     <ion-label>Inventory</ion-label>
                     <ion-icon name="list"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="shopping list">
+                    <ion-label>Shopping List</ion-label>
+                    <ion-icon name="cart"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="settings">
