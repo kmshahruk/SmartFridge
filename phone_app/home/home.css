@@ -1,11 +1,13 @@
 .compartment {
     text-align: center;
     border: 2px solid #0599ee;
-    height: 200px;
-    display: flex;
+    height: 170px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 4px 4px;
+    margin-top: 7%
+    
 }
 .compartment:hover {
     background-color: #004E89;
@@ -18,6 +20,10 @@
     background-color: #004E89;
     border-color: #004E89;
     color: white;
+}
+
+#compartmentGrid{
+    height: 100%;
 }
 
 #fridgeContainer {
@@ -56,4 +62,12 @@
 ion-list-header > ion-label {
     font-size: 20px;
     font-weight: 700;
+}
+
+.compTitle{
+font-size: 11pt
+}
+
+.compBody{
+font-size: 10pt
 }
