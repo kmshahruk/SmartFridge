@@ -88,3 +88,7 @@ ion-slides {
     border-color: #004E89;
     color: white;
 }
+
+.compName {
+    font-weight: bold;
+}
