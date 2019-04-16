@@ -34,23 +34,24 @@
                 <ion-grid>
                     <ion-row>
                            
-                        <ion-col class="compartment" id ="1" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="2" onclick="presentCompartmentModal(this)">Tempature: <br>73°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="3" onclick="presentCompartmentModal(this)">Tempature: <br>72°F <br><br>Humidity: <br>45%</ion-col>
+                        <ion-col class="compartment" id ="1" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 1</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="2" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 2</strong><br><br><br><div class= "compBody">Tempature: 73°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="3" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 3</strong><br><br><br><div class= "compBody">Tempature: 72°F <br><br>Humidity: 45%</div></ion-col>
+
+                    </ion-row>
+                    
+                    <ion-row>
+
+                        <ion-col class="compartment" id ="4" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 4</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="5" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 5</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="6" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 6</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
 
                     </ion-row>
                     <ion-row>
 
-                        <ion-col class="compartment" id ="4" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="5" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="6" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-
-                    </ion-row>
-                    <ion-row>
-
-                        <ion-col class="compartment" id ="7" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="8" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
-                        <ion-col class="compartment" id ="9" onclick="presentCompartmentModal(this)">Tempature: <br>75°F <br><br>Humidity: <br>40%</ion-col>
+                        <ion-col class="compartment" id ="7" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 7</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="8" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 8</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
+                        <ion-col class="compartment" id ="9" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 9</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
 
                     </ion-row>
                 </ion-grid>
@@ -175,27 +176,51 @@
 
                 <ion-content>
                     <ion-list>
-                        <ion-list-header>Single Selection</ion-list-header>
+                        <ion-list-header>General</ion-list-header>
 
                         <ion-item>
+                            <ion-icon name="color-palette"></ion-icon>
+                            &nbsp;
                             <ion-label>Theme</ion-label>
-                            <ion-select value="light">
+                            <ion-select value="light" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="light">Light</ion-select-option>
                                 <ion-select-option value="dark">Dark</ion-select-option>
                             </ion-select>
                         </ion-item>
 
                         <ion-item>
+                            <ion-icon name="thermometer"></ion-icon>
+                            &nbsp;
                             <ion-label>Temperature Unit</ion-label>
-                            <ion-select value="f">
+                            <ion-select value="f" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
                                 <ion-select-option value="f">Fahrenheit</ion-select-option>
                                 <ion-select-option value="c">Celcius</ion-select-option>
                             </ion-select>
                         </ion-item>
+                    <!-- <a href="../settings/notifications.html">
+                        <ion-item>
+                            Notifications
+                        </ion-item>
+                    </a> -->
+                        <ion-item>
+                                <ion-icon name="contact"></ion-icon>
+                                &nbsp;
+                                Account
+                        </ion-item>
+                        <ion-item>
+                                <ion-icon name="alert"></ion-icon>
+                                &nbsp;
+                                Notification
+                        </ion-item>
+                        <ion-item>
+                            <ion-icon name="trash"></ion-icon>
+                            &nbsp;
+                            Clear Data
+                        </ion-item>
 
                     </ion-list>
+                    <ion-button style = "display: block; margin: 0 auto; width: 30%">Log Out</ion-button>
 
-                    <ion-button>Log Out</ion-button>
                 </ion-content>
             </ion-tab>
 
