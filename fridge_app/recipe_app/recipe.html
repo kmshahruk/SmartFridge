@@ -10,9 +10,9 @@
     <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
     <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet" />
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-    <script src="home.js"></script>
     <link rel="stylesheet" href="recipe.css" />
     <link rel="stylesheet" href="../fridge.css">
+    <script src="recipe.js"></script>
 
 </head>
 
@@ -24,19 +24,24 @@
             </ion-toolbar>
             <ion-searchbar></ion-searchbar>
         </ion-header>
-
+        <ion-modal-controller></ion-modal-controller>
         <ion-content>
             <div class="section">
                 <h1 class="subtitle">Featured</h1>
                 <ion-slides pager="true">
                     <ion-slide>
                         <ion-card>
-                            <img src="https://i.ndtvimg.com/i/2016-06/chinese-625_625x350_81466064119.jpg">
-                            <ion-card-header>
-                                <ion-card-title>General Tso's Chicken</ion-card-title>
-                                <ion-card-subtitle>20 min.</ion-card-subtitle>
-                            </ion-card-header>
+                            <a href="../recipe_app/FoodDescrip/food_descrip.html">
+                                <img
+                                    src="https://padverts.com/wp-content/uploads/2016/06/salad_625x350_81465202111.jpg">
+                            </a>
+                            <a href="../recipe_app/FoodDescrip/food_descrip.html">
 
+                                <ion-card-header>
+                                    <ion-card-title>Ham Sandwich</ion-card-title>
+                                    <ion-card-subtitle>5 min.</ion-card-subtitle>
+                                </ion-card-header>
+                            </a>
                         </ion-card>
                         <ion-card>
                             <img src="https://i.ndtvimg.com/i/2016-06/noodles-625_625x350_41465896870.jpg">
@@ -49,9 +54,9 @@
                     </ion-slide>
                     <ion-slide>
                         <ion-card>
-                            <img src="https://padverts.com/wp-content/uploads/2016/06/salad_625x350_81465202111.jpg">
+                            <img src="https://i.ndtvimg.com/i/2016-06/chinese-625_625x350_81466064119.jpg">
                             <ion-card-header>
-                                <ion-card-title>Sandwich</ion-card-title>
+                                <ion-card-title>General Tso's Chicken</ion-card-title>
                                 <ion-card-subtitle>10 min.</ion-card-subtitle>
                             </ion-card-header>
 
@@ -90,7 +95,7 @@
                 <ion-slides pager="true">
                     <ion-slide>
                         <ion-card>
-                            <img src="https://i.ndtvimg.com/i/2015-07/sausage-625_625x350_71435918358.jpg">
+                            <img src="https://i.ndtvimg.com/i/2015-07/hot-dog-625_625x350_51435919105.jpg">
                             <ion-card-header>
                                 <ion-card-title>Big Fat Weiner</ion-card-title>
                                 <ion-card-subtitle>10 min.</ion-card-subtitle>
@@ -134,7 +139,7 @@
 
                         </ion-card>
                         <ion-card>
-                            <img src="https://healthywaymagazine.com/wp-content/uploads/2018/05/Almonds.jpg">
+                            <img src="https://i.ndtvimg.com/i/2016-06/nuts_625x350_41464956952.jpg">
                             <ion-card-header>
                                 <ion-card-title>RoASteD NuTz</ion-card-title>
                                 <ion-card-subtitle>1 min.</ion-card-subtitle>
@@ -146,7 +151,7 @@
                 </ion-slides>
             </div>
             <div class="section">
-                <h1 class="subtitle">Top Rated</h1>
+                <h1 class="subtitle">Based on Your Inventory</h1>
                 <ion-slides pager="true">
                     <ion-slide>
                         <ion-card>
@@ -264,9 +269,9 @@
             <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
             <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
             <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
-            <ion-icon name="logo-skype" size="large" class="app-icon"></ion-icon>
-            <ion-icon name="logo-usd" size="large" class="app-icon"></ion-icon>
-        </ion-footer>
+            <a href="../setting_app/setting.html">
+                <ion-icon name="settings" size="large" class="app-icon"></ion-icon>
+            </a>
     </ion-app>
 </body>
 
