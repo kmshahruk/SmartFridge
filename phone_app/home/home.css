@@ -64,6 +64,38 @@ ion-list-header > ion-label {
     font-weight: 700;
 }
 
+.note {
+    margin: unset !important;
+    height: 200px;
+}
+
+.note > ion-card-content > img {
+    height: 100px;
+    object-fit: contain;
+}
+
+#text {
+    width: 90%;
+    margin: 5%;
+}
+
+#text > textarea {
+    padding: 0px !important;
+}
+
+.noteCol {
+    height: 200px !important; 
+}
+
+ion-card-content > textarea {
+    max-height: 100px;
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+}
+
+ion-item > ion-icon {
+    margin-right: 10px !important;
 .compTitle{
 font-size: 11pt
 }

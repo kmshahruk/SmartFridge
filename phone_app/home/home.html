@@ -13,7 +13,12 @@
     <link rel="stylesheet" href="home.css">
     <script src="fridge.js"></script>
     <script src="../custom-elements/AddItemModal.js"></script>
+    <script src="../custom-elements/AddNoteModal.js"></script>
+    <script src="../custom-elements/AddShoppingItemModal.js"></script>
     <script src="home.js"></script>
+    <script src="notes.js"></script>
+    <script src="inventory.js"></script>
+    <script src="shopping.js"></script>
 </head>
 
 <body>
@@ -28,7 +33,6 @@
                         <ion-title>Home</ion-title>
                     </ion-toolbar>
                 </ion-header>
-           
 
                 <div id ="compartmentGrid">
                 <ion-grid>
@@ -46,16 +50,16 @@
                         <ion-col class="compartment" id ="5" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 5</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
                         <ion-col class="compartment" id ="6" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 6</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
 
-                    </ion-row>
-                    <ion-row>
+                        </ion-row>
+                        <ion-row>
 
                         <ion-col class="compartment" id ="7" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 7</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
                         <ion-col class="compartment" id ="8" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 8</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
                         <ion-col class="compartment" id ="9" onclick="presentCompartmentModal(this)"><strong class = "compTitle">Compartment 9</strong><br><br><br><div class= "compBody">Tempature: 75°F <br><br>Humidity: 40%</div></ion-col>
 
-                    </ion-row>
-                </ion-grid>
-            </div>
+                        </ion-row>
+                    </ion-grid>
+                </div>
 
             </ion-tab>
 
@@ -64,9 +68,52 @@
                     <ion-toolbar>
                         <ion-title>Notes</ion-title>
                     </ion-toolbar>
+
+                    <ion-searchbar></ion-searchbar>
                 </ion-header>
 
-                <ion-searchbar></ion-searchbar>
+                <ion-content>
+                    <ion-grid id="grid">
+                        <ion-row id="notesRow">
+                            <ion-col class="noteCol" size="6">
+                                <ion-card class="note" onClick="onTextNoteClick(this)">
+                                    <ion-card-header>
+                                        <ion-card-subtitle>Card Title</ion-card-subtitle>
+                                    </ion-card-header>
+                                    <ion-card-content>
+                                        <textarea rows=20
+                                            disabled>Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.</textarea>
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col class="noteCol" size="6">
+                                <ion-card class="note" onClick="onTextNoteClick(this)">
+                                    <ion-card-header>
+                                        <ion-card-subtitle>Shopping List</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        <textarea rows=20 disabled>- EGG x 1&#013;&#010;- BREAD x 2</textarea>
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-content>
+
+                <ion-fab vertical="bottom" horizontal="end">
+                    <ion-fab-button>
+                        <ion-icon name="add"></ion-icon>
+                    </ion-fab-button>
+                    <ion-fab-list side="top">
+                        <ion-fab-button onclick="createNote(false)">
+                            <ion-icon name="create"></ion-icon>
+                        </ion-fab-button>
+                        <ion-fab-button onclick="createNote(true)">
+                            <ion-icon name="brush"></ion-icon>
+                        </ion-fab-button>
+                    </ion-fab-list>
+                </ion-fab>
             </ion-tab>
 
             <ion-tab tab="inventory">
@@ -84,35 +131,32 @@
                                 <ion-label>
                                     Fruits
                                 </ion-label>
-                                <ion-button onclick="presentModal(this)" fill="clear" id="fruits">
-                                    <ion-icon name="add" size="large"></ion-icon>
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits" class="addButton">
+                                    <ion-icon name="add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
                             <ion-item-sliding>
-                                <ion-item>
-                                    <ion-label>
-                                        <h3>Grapes</h3>
-                                    </ion-label>
+                                <ion-item onclick="onItemClick(this)" expiration="2019-04-23T20:00:00-04:00">
+                                    <ion-icon name="alert" color="warning" slot="start" size="small"></ion-icon>
+                                    <p>Grapes</p>
                                     <p slot="end">4</p>
                                 </ion-item>
                                 <ion-item-options>
-                                    <ion-item-option>
-                                        Edit
+                                    <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                        Delete
                                     </ion-item-option>
                                 </ion-item-options>
                             </ion-item-sliding>
 
                             <ion-item-sliding>
-                                <ion-item>
-                                    <ion-label>
-                                        <h3>Apples</h3>
-                                    </ion-label>
+                                <ion-item onclick="onItemClick(this)" expiration="2019-07-23T20:00:00-04:00">
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                                    <p>Apples</p>
                                     <p slot="end">1</p>
-
                                 </ion-item>
                                 <ion-item-options>
-                                    <ion-item-option>
-                                        Favorite
+                                    <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                        Delete
                                     </ion-item-option>
                                 </ion-item-options>
                             </ion-item-sliding>
@@ -124,46 +168,64 @@
                                     Vegetables
                                 </ion-label>
 
-                                <ion-button onclick="presentModal(this)" fill="clear" id="vegetable">
-                                    <ion-icon name="add" size="large"></ion-icon>
+                                <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable"
+                                    class="addButton">
+                                    <ion-icon name="add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
 
                             <ion-item-sliding>
-                                <ion-item>
-                                    <ion-label>
-                                        <h3>Carrots</h3>
-                                    </ion-label>
+                                <ion-item onclick="onItemClick(this)" expiration="2019-05-23T20:00:00-04:00">
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                                    <p>Carrots</p>
                                     <p slot="end">2</p>
-
                                 </ion-item>
                                 <ion-item-options>
-                                    <ion-item-option>
-                                        Favorite
+                                    <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                        Delete
                                     </ion-item-option>
                                 </ion-item-options>
                             </ion-item-sliding>
 
                             <ion-item-sliding>
-                                <ion-item>
-                                    <ion-label>
-                                        <h3>Celery</h3>
-                                    </ion-label>
+                                <ion-item onclick="onItemClick(this)" expiration="2019-05-27T20:00:00-04:00">
+                                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                                    <p>Celery</p>
                                     <p slot="end">9</p>
-
                                 </ion-item>
                                 <ion-item-options>
-                                    <ion-item-option>
-                                        Favorite
+                                    <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                        Delete
                                     </ion-item-option>
                                 </ion-item-options>
                             </ion-item-sliding>
                         </ion-list>
                     </div>
 
-                    <ion-button onclick="presentPrompt()" fill="clear" id="vegetable">
+                    <ion-button onclick="presentCategoryPrompt()" fill="clear" id="vegetable">
                         Add Category
                     </ion-button>
+                </ion-content>
+            </ion-tab>
+
+            <ion-tab tab="shopping list">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-title>Shopping List</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+
+                <ion-content>
+                    <ion-list>
+                        <ion-item>
+                            <ion-icon name="add" onclick="addClicked(this.parentElement)"></ion-icon>
+                            <ion-input onkeypress="enterPressed(event, this.parentElement)"></ion-input>
+                        </ion-item>
+                    </ion-list>
+
+                    <ion-list id="shoppingList">
+
+                    </ion-list>
                 </ion-content>
             </ion-tab>
 
@@ -239,6 +301,11 @@
                 <ion-tab-button tab="inventory">
                     <ion-label>Inventory</ion-label>
                     <ion-icon name="list"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="shopping list">
+                    <ion-label>Shopping List</ion-label>
+                    <ion-icon name="cart"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="settings">

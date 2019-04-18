@@ -1,4 +1,4 @@
-class AddItemModal extends HTMLElement {
+class AddShoppingItemModal extends HTMLElement {
     async connectedCallback() {
         this.innerHTML = `
         <ion-alert-controller></ion-alert-controller>
@@ -10,7 +10,7 @@ class AddItemModal extends HTMLElement {
                     </ion-button>
                 </ion-buttons>
     
-                <ion-title>Add Item</ion-title>
+                <ion-title>Edit Item</ion-title>
     
                 <ion-buttons slot="end">
                     <ion-button class="dismiss" id="done">
@@ -28,12 +28,7 @@ class AddItemModal extends HTMLElement {
             <ion-item>
                 <ion-label position="stacked" type="number">Quantity</ion-label>
                 <ion-input id="quantity"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label position="stacked">Expiration Date</ion-label>
-                <ion-datetime display-format="MMM DD, YYYY" value="2019-04-20T20:00:00-04:00" min="2019" max="2030"></ion-datetime>
-            </ion-item>
-    
+            </ion-item>    
             
         </ion-content>
         `;
@@ -41,19 +36,16 @@ class AddItemModal extends HTMLElement {
         if (!this.listName) {
             document.querySelector('#name').value = this.name
             document.querySelector('#quantity').value = this.quantity
-            document.querySelector("ion-datetime").value = this.expiration
         }
 
         document.querySelector('#back').addEventListener('click', async () => {
-            console.log( document.querySelector("ion-datetime").value)
             await document.querySelector('ion-modal-controller').dismiss();
         });
 
         document.querySelector('#done').addEventListener('click', async () => {
             var name = document.querySelector('#name').value
             var quantity = document.querySelector('#quantity').value
-            var datetime = document.querySelector('ion-datetime').value
-
+            console.log("quantity is: ", quantity)
             if(name.trim() != "" && quantity.trim() != "") {
                 if (this.listName) {
                     document.getElementById(this.listName).innerHTML += `<ion-item-sliding>
@@ -69,7 +61,6 @@ class AddItemModal extends HTMLElement {
                     var data = {
                         'name': document.querySelector('#name').value,
                         'quantity': document.querySelector('#quantity').value,
-                        'expiration': document.querySelector("ion-datetime").value
                     }
 
                     await document.querySelector('ion-modal-controller').dismiss(data);
@@ -87,7 +78,7 @@ class AddItemModal extends HTMLElement {
 
             const alert = await alertController.create({
                 header: 'Error',
-                message: 'Please fill out all fields',
+                message: 'Please fill out all fields faggot',
                 buttons: ['OK']
             })
 
