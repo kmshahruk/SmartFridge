@@ -1,0 +1,29 @@
+.note {
+    margin: unset !important;
+    height: 200px;
+}
+
+.note > ion-card-content > img {
+    height: 100px;
+    object-fit: contain;
+}
+
+#text {
+    width: 90%;
+    margin: 5%;
+}
+
+#text > textarea {
+    padding: 0px !important;
+}
+
+.noteCol {
+    height: 200px !important; 
+}
+
+ion-card-content > textarea {
+    max-height: 100px;
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+}
