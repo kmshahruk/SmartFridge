@@ -78,7 +78,7 @@ class AddShoppingItemModal extends HTMLElement {
 
             const alert = await alertController.create({
                 header: 'Error',
-                message: 'Please fill out all fields faggot',
+                message: 'Please fill out all fields',
                 buttons: ['OK']
             })
 
