@@ -6,7 +6,7 @@ class AddShoppingItemModal extends HTMLElement {
             <ion-toolbar>
                 <ion-buttons slot="start">
                     <ion-button class="dismiss" id="back">
-                    <ion-icon name="arrow-back"></ion-icon>
+                    <ion-icon name="ios-arrow-back"></ion-icon>
                     </ion-button>
                 </ion-buttons>
     

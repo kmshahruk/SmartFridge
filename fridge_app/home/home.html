@@ -19,8 +19,8 @@
     <ion-app>
         <ion-content>
             <div id="statusbar">
-                <ion-icon name="unlock" size="medium" class="left-margin"></ion-icon>
-                <ion-icon name="wifi" size="medium" class="right-margin float-right"></ion-icon>
+                <ion-icon name="ios-unlock" size="medium" class="left-margin"></ion-icon>
+                <ion-icon name="ios-wifi" size="medium" class="right-margin float-right"></ion-icon>
             </div>
             <ion-slides pager="true">
 
@@ -28,7 +28,7 @@
                     <div class="page" id="page1">
                         <div id="header">
                             <div class="left-margin">
-                                <ion-icon name="cloudy-night" size="large" id="weather-icon"></ion-icon>
+                                <ion-icon name="ios-cloudy-night" size="large" id="weather-icon"></ion-icon>
                                 <p id="temperature">35</p>
                             </div>
 
@@ -64,10 +64,10 @@
                                         <ion-label slot="start">0</ion-label>
                                         <ion-label slot="end">3:45</ion-label>
                                     </ion-range>
-                                    <ion-icon name="skip-backward" size="large" class="float-left left-margin">
+                                    <ion-icon name="ios-skip-backward" size="large" class="float-left left-margin">
                                     </ion-icon>
-                                    <ion-icon name="play" size="large"></ion-icon>
-                                    <ion-icon name="skip-forward" size="large" class="float-right right-margin">
+                                    <ion-icon name="ios-play" size="large"></ion-icon>
+                                    <ion-icon name="ios-skip-forward" size="large" class="float-right right-margin">
                                     </ion-icon>
                                 </ion-card-content>
                             </ion-card>
@@ -228,18 +228,18 @@
                         <div id="FridgeControl">
                             <div id="HumidityControl">
                                 <h3>Humidity Control</h3>
-                                <ion-icon size="large" class="arrow" name="arrow-dropup-circle"
+                                <ion-icon size="large" class="arrow" name="ios-arrow-dropup-circle"
                                     onclick="incrHumidity(this)"></ion-icon>
                                 <p id="humidityNumber">Select a Compartment</p>
-                                <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"
+                                <ion-icon size="large" class="arrow" name="ios-arrow-dropdown-circle"
                                     onclick="decrHumidity(this)"></ion-icon>
                             </div>
                             <div id="TemperatureControl">
                                 <h3>Temperature Control</h3>
-                                <ion-icon size="large" class="arrow" name="arrow-dropup-circle"
+                                <ion-icon size="large" class="arrow" name="ios-arrow-dropup-circle"
                                     onclick="incrTemp(this)"></ion-icon>
                                 <p id="temperatureNumber">Select a Compartment</p>
-                                <ion-icon size="large" class="arrow" name="arrow-dropdown-circle"
+                                <ion-icon size="large" class="arrow" name="ios-arrow-dropdown-circle"
                                     onclick="decrTemp(this)"></ion-icon>
                             </div>
 
@@ -256,44 +256,28 @@
                 </ion-slide>
             </ion-slides>
 
-            <ion-footer>
-                <ion-content scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
-                    <a href="../calendar_app/calendar.html">
-                        <ion-icon name="calendar" size="large" class="app-icon"></ion-icon>
-                    </a>
-                    <a href="../recipe_app/recipe.html">
-                        <ion-icon name="restaurant" size="large" class="app-icon"></ion-icon>
-                    </a>
-                    <ion-icon name="logo-bitbucket" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-skype" size="large" class="app-icon"></ion-icon>
-                    <ion-icon name="logo-usd" size="large" class="app-icon"></ion-icon>
-                </ion-content>
-            </ion-footer>
+
         </ion-content>
 
         <ion-footer scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
             <a href="../home/home.html">
-                <ion-icon name="home" size="large" class="app-icon"></ion-icon>
+                <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
             </a>
             <a href="../calendar_app/calendar.html">
-                <ion-icon name="calendar" size="large" class="app-icon"></ion-icon>
+                <ion-icon name="ios-calendar" size="large" class="app-icon"></ion-icon>
             </a>
             <a href="../notes_app/notes.html">
-                <ion-icon name="list-box" size="large" class="app-icon"></ion-icon>
+                <ion-icon name="ios-list-box" size="large" class="app-icon"></ion-icon>
             </a>
             <a href="../recipe_app/recipe.html">
-                <ion-icon name="restaurant" size="large" class="app-icon"></ion-icon>
+                <ion-icon name="ios-restaurant" size="large" class="app-icon"></ion-icon>
             </a>
-            <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
-            <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
-            <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="ios-cart" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="ios-headset" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="ios-basket" size="large" class="app-icon"></ion-icon>
             <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
             <a href="../setting_app/setting.html">
-                <ion-icon name="settings" size="large" class="app-icon"></ion-icon>
+                <ion-icon name="ios-settings" size="large" class="app-icon"></ion-icon>
             </a>
         </ion-footer>
     </ion-app>

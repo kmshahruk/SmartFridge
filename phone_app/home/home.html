@@ -103,14 +103,14 @@
 
                 <ion-fab vertical="bottom" horizontal="end">
                     <ion-fab-button>
-                        <ion-icon name="add"></ion-icon>
+                        <ion-icon name="ios-add"></ion-icon>
                     </ion-fab-button>
                     <ion-fab-list side="top">
                         <ion-fab-button onclick="createNote(false)">
-                            <ion-icon name="create"></ion-icon>
+                            <ion-icon name="ios-create"></ion-icon>
                         </ion-fab-button>
                         <ion-fab-button onclick="createNote(true)">
-                            <ion-icon name="brush"></ion-icon>
+                            <ion-icon name="ios-brush"></ion-icon>
                         </ion-fab-button>
                     </ion-fab-list>
                 </ion-fab>
@@ -132,12 +132,12 @@
                                     Fruits
                                 </ion-label>
                                 <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits" class="addButton">
-                                    <ion-icon name="add"></ion-icon>
+                                    <ion-icon name="ios-add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
                             <ion-item-sliding>
                                 <ion-item onclick="onItemClick(this)" expiration="2019-04-23T20:00:00-04:00">
-                                    <ion-icon name="alert" color="warning" slot="start" size="small"></ion-icon>
+                                    <ion-icon name="ios-alert" color="warning" slot="start" size="small"></ion-icon>
                                     <p>Grapes</p>
                                     <p slot="end">4</p>
                                 </ion-item>
@@ -170,7 +170,7 @@
 
                                 <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable"
                                     class="addButton">
-                                    <ion-icon name="add"></ion-icon>
+                                    <ion-icon name="ios-add"></ion-icon>
                                 </ion-button>
                             </ion-list-header>
 
@@ -218,7 +218,7 @@
                 <ion-content>
                     <ion-list>
                         <ion-item>
-                            <ion-icon name="add" onclick="addClicked(this.parentElement)"></ion-icon>
+                            <ion-icon name="ios-add" onclick="addClicked(this.parentElement)"></ion-icon>
                             <ion-input onkeypress="enterPressed(event, this.parentElement)"></ion-input>
                         </ion-item>
                     </ion-list>
@@ -241,7 +241,7 @@
                         <ion-list-header>General</ion-list-header>
 
                         <ion-item>
-                            <ion-icon name="color-palette"></ion-icon>
+                            <ion-icon name="ios-color-palette"></ion-icon>
                             &nbsp;
                             <ion-label>Theme</ion-label>
                             <ion-select value="light" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
@@ -251,7 +251,7 @@
                         </ion-item>
 
                         <ion-item>
-                            <ion-icon name="thermometer"></ion-icon>
+                            <ion-icon name="ios-thermometer"></ion-icon>
                             &nbsp;
                             <ion-label>Temperature Unit</ion-label>
                             <ion-select value="f" [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
@@ -265,17 +265,17 @@
                         </ion-item>
                     </a> -->
                         <ion-item>
-                                <ion-icon name="contact"></ion-icon>
+                                <ion-icon name="ios-contact"></ion-icon>
                                 &nbsp;
                                 Account
                         </ion-item>
                         <ion-item>
-                                <ion-icon name="alert"></ion-icon>
+                                <ion-icon name="ios-alert"></ion-icon>
                                 &nbsp;
                                 Notification
                         </ion-item>
                         <ion-item>
-                            <ion-icon name="trash"></ion-icon>
+                            <ion-icon name="ios-trash"></ion-icon>
                             &nbsp;
                             Clear Data
                         </ion-item>
@@ -290,27 +290,27 @@
 
                 <ion-tab-button tab="home">
                     <ion-label>Home</ion-label>
-                    <ion-icon name="home"></ion-icon>
+                    <ion-icon name="ios-home"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="notes">
                     <ion-label>Notes</ion-label>
-                    <ion-icon name="paper"></ion-icon>
+                    <ion-icon name="ios-paper"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="inventory">
                     <ion-label>Inventory</ion-label>
-                    <ion-icon name="list"></ion-icon>
+                    <ion-icon name="ios-list"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="shopping list">
                     <ion-label>Shopping List</ion-label>
-                    <ion-icon name="cart"></ion-icon>
+                    <ion-icon name="ios-cart"></ion-icon>
                 </ion-tab-button>
 
                 <ion-tab-button tab="settings">
                     <ion-label>Settings</ion-label>
-                    <ion-icon name="settings"></ion-icon>
+                    <ion-icon name="ios-settings"></ion-icon>
                 </ion-tab-button>
 
             </ion-tab-bar>

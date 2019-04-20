@@ -44,15 +44,15 @@ async function createCompartmentModal(evnt) {
                             <div id="controls">
                                 <div id="TemperatureControl">
                                     <h3>Temperature</h3>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrTemp(this)"></ion-icon>
+                                    <ion-icon size="large" class="arrow" name="ios-arrow-dropup-circle" onclick="incrTemp(this)"></ion-icon>
                                     <p id="temperatureNumber">`+ temp +`°F</p>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrTemp(this)"></ion-icon>
+                                    <ion-icon size="large" class="arrow" name="ios-arrow-dropdown-circle" onclick="decrTemp(this)"></ion-icon>
                                 </div>
                                 <div id="HumidityControl">
                                     <h3>Humidity</h3>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropup-circle" onclick="incrHumidity(this)"></ion-icon>
+                                    <ion-icon size="large" class="arrow" name="ios-arrow-dropup-circle" onclick="incrHumidity(this)"></ion-icon>
                                     <p id="humidityNumber">`+ humid +`%</p>
-                                    <ion-icon size="large" class="arrow" name="arrow-dropdown-circle" onclick="decrHumidity(this)"></ion-icon>
+                                    <ion-icon size="large" class="arrow" name="ios-arrow-dropdown-circle" onclick="decrHumidity(this)"></ion-icon>
                                 </div>
                                 </div>
 
