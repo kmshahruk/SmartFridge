@@ -1,12 +1,11 @@
-#music-app {
+#music-player {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #controls {
     flex: 1;
-    width: 100%;
-    height: 100%;
     background-color: #AAAAAA;
     padding: 30px 50px 30px 50px;
 }
@@ -17,10 +16,12 @@
 
 .timestamp {
     color: white;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #playback {
-    padding: 30px;
+    padding: 30px 60px 30px 60px;
     display: flex;
     justify-content: space-between;
     color: white;
