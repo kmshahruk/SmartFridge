@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet" />
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="../fridge.css">
+
 </head>
+
 <body>
     <ion-app>
+        <ion-content>
+            <div id="music-player">
+                <img src="https://s3.amazonaws.com/media.thecrimson.com/photos/2019/04/14/200610_1337381.jpeg"
+                    width="100%">
+                <div id="controls">
+                    <ion-range min="-200" max="200" id="time">
+                        <ion-label class="timestamp" slot="start">0</ion-label>
+                        <ion-label class="timestamp" slot="end">3:45</ion-label>
+                    </ion-range>
+                    <div id="playback">
+                        <ion-icon name="rewind" size="large"></ion-icon>
+                        <ion-icon name="play" size="large"></ion-icon>
+                        <ion-icon name="fastforward" size="large"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
 
+        <ion-footer scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')" class="white">
+            <a href="../home/home.html">
+                <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../calendar_app/calendar.html">
+                <ion-icon name="ios-calendar" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../notes_app/notes.html">
+                <ion-icon name="ios-list-box" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../recipe_app/recipe.html">
+                <ion-icon name="ios-restaurant" size="large" class="app-icon"></ion-icon>
+            </a>
+            <ion-icon name="ios-cart" size="large" class="app-icon"></ion-icon>
+            <a href="../music_app/music.html">
+                <ion-icon name="ios-headset" size="large" class="app-icon"></ion-icon>
+            </a>
+            <ion-icon name="ios-basket" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+            <a href="../setting_app/setting.html">
+                <ion-icon name="ios-settings" size="large" class="app-icon"></ion-icon>
+            </a>
+        </ion-footer>
     </ion-app>
 </body>
+
 </html>
