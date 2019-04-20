@@ -12,6 +12,7 @@
 
 #time {
     --bar-background-active: white;
+    --bar-background: grey;
 }
 
 .timestamp {

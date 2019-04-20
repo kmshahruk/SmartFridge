@@ -20,17 +20,16 @@
     <ion-app>
         <ion-content>
             <div id="music-player">
-                <img src="https://s3.amazonaws.com/media.thecrimson.com/photos/2019/04/14/200610_1337381.jpeg"
-                    width="100%">
+                <img width="100%">
                 <div id="controls">
-                    <ion-range min="0" max="113" id="time" value="0">
+                    <ion-range min="0" max="0" id="time" value="0">
                         <ion-label class="timestamp" id="start" slot="start">0:00</ion-label>
-                        <ion-label class="timestamp" id="end" slot="end">1:53</ion-label>
+                        <ion-label class="timestamp" id="end" slot="end">0:00</ion-label>
                     </ion-range>
                     <div id="playback">
                         <ion-icon name="rewind" size="large" onclick="previous()"></ion-icon>
-                        <ion-icon name="play" size="large" onclick="toggle(this)"></ion-icon>
-                        <ion-icon name="fastforward" size="large"></ion-icon>
+                        <ion-icon id="playpause" name="play" size="large" onclick="toggle()"></ion-icon>
+                        <ion-icon name="fastforward" size="large" onclick="next()"></ion-icon>
                     </div>
                 </div>
             </div>
