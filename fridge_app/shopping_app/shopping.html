@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="ios">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fridge App</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet" />
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="shopping.css" />
+    <link rel="stylesheet" href="../fridge.css">
+    <script src="../../phone_app/custom-elements/AddShoppingItemModal.js"></script>
+    <script src="shopping.js"></script>
+
+
+</head>
+
+<body>
+    <ion-app>
+        <ion-modal-controller></ion-modal-controller>
+
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Shopping List</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+            <ion-list>
+                <ion-item>
+                    <ion-icon name="ios-add" onclick="addClicked(this.parentElement)"></ion-icon>
+                    <ion-input placeholder="Add Item" onkeypress="enterPressed(event, this.parentElement)"></ion-input>
+                </ion-item>
+            </ion-list>
+
+            <ion-list id="shoppingList">
+
+            </ion-list>
+        </ion-content>
+        <ion-footer scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
+            <a href="../home/home.html">
+                <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../calendar_app/calendar.html">
+                <ion-icon name="ios-calendar" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../notes_app/notes.html">
+                <ion-icon name="ios-list-box" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../recipe_app/recipe.html">
+                <ion-icon name="ios-restaurant" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../shopping_app/shopping.html">
+                <ion-icon name="ios-cart" size="large" class="app-icon"></ion-icon>
+            </a>            <ion-icon name="ios-headset" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="ios-basket" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+            <a href="../setting_app/setting.html">
+                <ion-icon name="ios-settings" size="large" class="app-icon"></ion-icon>
+            </a>
+    </ion-app>
+</body>
+
+</html>
