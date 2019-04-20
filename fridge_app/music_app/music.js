@@ -1,6 +1,13 @@
 var timeout
 var track = new Audio('../../support_files/oldtown.mp3')
 
+window.onload = function() {
+    document.querySelector('ion-range').addEventListener('ionChange', function() {
+        console.log('a')
+    })
+}
+
+
 function toggle(item) {
     if (item.name == "play") {
         item.name = "pause"
