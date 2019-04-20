@@ -17,7 +17,7 @@ function addItem(item){
                     </ion-item> 
                     
                 </ion-item-sliding>`
-    item.parentElement.parentElement.querySelector('#shoppingList').innerHTML += toAdd
+    document.querySelector('#shoppingList').innerHTML += toAdd
 
     item.querySelector("ion-input").value = ""
 }
@@ -85,4 +85,8 @@ function enterPressed(e, item) {
     if(code == 13) { //Enter keycode
         addItem(item)
     }
+}
+
+function addFromInventory() {
+    document.querySelector('#compartmentItems').style.display = "block"
 }

@@ -1,1 +1,10 @@
+#inventory {
+    position: absolute;
+    bottom: 7vh;
+    margin-left: 10px;
+    /* color: blue; */
+}
 
+#compartmentItems {
+    display: none;
+}

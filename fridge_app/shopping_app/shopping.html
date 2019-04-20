@@ -26,20 +26,65 @@
             <ion-toolbar>
                 <ion-title>Shopping List</ion-title>
             </ion-toolbar>
-        </ion-header>
 
-        <ion-content>
             <ion-list>
                 <ion-item>
                     <ion-icon name="ios-add" onclick="addClicked(this.parentElement)"></ion-icon>
                     <ion-input placeholder="Add Item" onkeypress="enterPressed(event, this.parentElement)"></ion-input>
                 </ion-item>
             </ion-list>
+        </ion-header>
 
+        <ion-content>
             <ion-list id="shoppingList">
+                <div id="compartmentItems">
+                    <ion-item-sliding>
+                        <ion-item-options side="end">
+                            <ion-item-option color="danger" onclick=deleteItem(this)>
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+
+                        <ion-item onclick=onShoppingItemClick(this) quantity="0">
+                            <p class="shoppingListName">Grapes</p>
+                            <p slot="end" class="shoppingListQuantity"></p>
+                        </ion-item>
+
+                    </ion-item-sliding>
+                    <ion-item-sliding>
+                        <ion-item-options side="end">
+                            <ion-item-option color="danger" onclick=deleteItem(this)>
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+
+                        <ion-item onclick=onShoppingItemClick(this) quantity="0">
+                            <p class="shoppingListName">Carrots</p>
+                            <p slot="end" class="shoppingListQuantity"></p>
+                        </ion-item>
+
+                    </ion-item-sliding>
+                    <ion-item-sliding>
+                        <ion-item-options side="end">
+                            <ion-item-option color="danger" onclick=deleteItem(this)>
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+
+                        <ion-item onclick=onShoppingItemClick(this) quantity="0">
+                            <p class="shoppingListName">Celery</p>
+                            <p slot="end" class="shoppingListQuantity"></p>
+                        </ion-item>
+
+                    </ion-item-sliding>
+                </div>
 
             </ion-list>
+
         </ion-content>
+
+        <ion-button fill="outline" id="inventory" onclick="addFromInventory()">Import from inventory</ion-button>
+
         <ion-footer scroll-x="true" scroll-y="false" id="app-list">
             <a href="../home/home.html">
                 <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
