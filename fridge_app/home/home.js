@@ -16,8 +16,8 @@ function selectCompartment(compartment) {
   compartment.className = "compartment hydrated selected";
   selectedCompartment = compartment;
   var nums = compartment.innerHTML.toString().match(/\d+/g);
-  temperature.innerHTML = nums[0] + "°F";
-  humidity.innerHTML = nums[1] + "%";
+  temperature.innerHTML = nums[1] + "°F";
+  humidity.innerHTML = nums[2] + "%";
 }
 
 function incrHumidity() {
