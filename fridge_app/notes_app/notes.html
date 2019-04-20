@@ -2,74 +2,97 @@
 <html lang="en" class="ios">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notes</title>
 
-    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
-    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-    <script src="notes.js"></script>
-    <link rel="stylesheet" href="notes.css">
+  <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+  <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  <script src="../../phone_app/custom-elements/AddNoteModal.js"></script>
+
+  <script src="notes.js"></script>
+  <link rel="stylesheet" href="notes.css">
+  <link rel="stylesheet" href="../fridge.css">
+
 </head>
 
 <body>
 
-    <ion-app>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Notes</ion-title>
-            </ion-toolbar>
-            <ion-searchbar></ion-searchbar>
-        </ion-header>
+  <ion-app>
+    <ion-modal-controller></ion-modal-controller>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Notes</ion-title>
+      </ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+    </ion-header>
 
-        <ion-content>
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="4">
-                        <ion-card>
-                            <ion-card-header>
-                              <ion-card-title>Shopping List</ion-card-title>
-                            </ion-card-header>
-                          
-                            <ion-card-content>
-                             - Eggs <br>
-                             - Bread <br>
-                             - Meat <br>
-                             - Cheese <br>
-                             - Soup <br>
-                            </ion-card-content>
-                          </ion-card>
-                    </ion-col>
-                    <ion-col size="4">
-                        <ion-card>
-                            <ion-card-header>
-                              <ion-card-title>Card Title</ion-card-title>
-                            </ion-card-header>
-                          
-                            <ion-card-content>
-                              Keep close to Nature's heart... and break clear away, once in awhile,
-                              and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                            </ion-card-content>
-                          </ion-card>
-                    </ion-col>
-                    <ion-col size="4">
-                        <ion-card>
-                            <ion-card-header>
-                              <ion-card-title>Card Title</ion-card-title>
-                            </ion-card-header>
-                          
-                            <ion-card-content>
-                              Keep close to Nature's heart... and break clear away, once in awhile,
-                              and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                            </ion-card-content>
-                          </ion-card>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-content>
-    </ion-app>
+    <ion-content>
+        <ion-grid id="grid">
+            <ion-row id="notesRow">
+                <ion-col class="noteCol" size="6">
+                    <ion-card class="note" onClick="onTextNoteClick(this)">
+                        <ion-card-header>
+                            <ion-card-subtitle>Card Title</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <textarea rows=20
+                                disabled>Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.</textarea>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+                <ion-col class="noteCol" size="6">
+                    <ion-card class="note" onClick="onTextNoteClick(this)">
+                        <ion-card-header>
+                            <ion-card-subtitle>Shopping List</ion-card-subtitle>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <textarea rows=20 disabled>- EGG x 1&#013;&#010;- BREAD x 2</textarea>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+      <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button>
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button onclick="createNote(false)">
+            <ion-icon name="create"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button onclick="createNote(true)">
+            <ion-icon name="brush"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-content>
+    <ion-footer scroll-x="true" scroll-y="false" id="app-list" onscroll="alert('tes')">
+      <a href="../home/home.html">
+        <ion-icon name="home" size="large" class="app-icon"></ion-icon>
+      </a>
+      <a href="../calendar_app/calendar.html">
+        <ion-icon name="calendar" size="large" class="app-icon"></ion-icon>
+      </a>
+      <a href="../notes_app/notes.html">
+        <ion-icon name="list-box" size="large" class="app-icon"></ion-icon>
+      </a>
+      <a href="../recipe_app/recipe.html">
+        <ion-icon name="restaurant" size="large" class="app-icon"></ion-icon>
+      </a>
+      <ion-icon name="logo-github" size="large" class="app-icon"></ion-icon>
+      <ion-icon name="logo-ionitron" size="large" class="app-icon"></ion-icon>
+      <ion-icon name="logo-octocat" size="large" class="app-icon"></ion-icon>
+      <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+      <a href="../setting_app/setting.html">
+        <ion-icon name="settings" size="large" class="app-icon"></ion-icon>
+      </a>
+    </ion-footer>
+  </ion-app>
 
 </body>
 
