@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="ios">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes</title>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script src="../../phone_app/custom-elements/AddItemModal.js"></script>
+    <script src="inventory.js"></script>
+
+    <link rel="stylesheet" href="inventory.css">
+    <link rel="stylesheet" href="../fridge.css">
+
+</head>
+
+<body>
+
+    <ion-app>
+        <ion-modal-controller></ion-modal-controller>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Inventory</ion-title>
+            </ion-toolbar>
+            <ion-searchbar></ion-searchbar>
+        </ion-header>
+
+        <ion-content>
+            <!-- They can also be used to group sliding items -->
+            <div id="lists">
+                <ion-list id="fruitsList">
+                    <ion-list-header>
+                        <ion-label>
+                            Fruits
+                        </ion-label>
+                        <ion-button onclick="presentItemModal(this)" fill="clear" id="fruits" class="addButton">
+                            <ion-icon name="ios-add"></ion-icon>
+                        </ion-button>
+                    </ion-list-header>
+                    <ion-item-sliding>
+                        <ion-item onclick="onItemClick(this)" expiration="2019-04-23T20:00:00-04:00">
+                            <ion-icon name="ios-alert" color="warning" slot="start" size="small"></ion-icon>
+                            <p>Grapes</p>
+                            <p slot="end">4</p>
+                        </ion-item>
+                        <ion-item-options>
+                            <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item onclick="onItemClick(this)" expiration="2019-07-23T20:00:00-04:00">
+                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <p>Apples</p>
+                            <p slot="end">1</p>
+                        </ion-item>
+                        <ion-item-options>
+                            <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+
+                <ion-list id="vegetableList">
+                    <ion-list-header>
+                        <ion-label>
+                            Vegetables
+                        </ion-label>
+
+                        <ion-button onclick="presentItemModal(this)" fill="clear" id="vegetable" class="addButton">
+                            <ion-icon name="ios-add"></ion-icon>
+                        </ion-button>
+                    </ion-list-header>
+
+                    <ion-item-sliding>
+                        <ion-item onclick="onItemClick(this)" expiration="2019-05-23T20:00:00-04:00">
+                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <p>Carrots</p>
+                            <p slot="end">2</p>
+                        </ion-item>
+                        <ion-item-options>
+                            <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+
+                    <ion-item-sliding>
+                        <ion-item onclick="onItemClick(this)" expiration="2019-05-27T20:00:00-04:00">
+                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <p>Celery</p>
+                            <p slot="end">9</p>
+                        </ion-item>
+                        <ion-item-options>
+                            <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
+                                Delete
+                            </ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+            </div>
+
+            <ion-button onclick="presentCategoryPrompt()" fill="clear" id="vegetable">
+                Add Category
+            </ion-button>
+        </ion-content>
+
+        <ion-footer scroll-x="true" scroll-y="false" id="app-list">
+            <a href="../home/home.html">
+                <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../calendar_app/calendar.html">
+                <ion-icon name="ios-calendar" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../notes_app/notes.html">
+                <ion-icon name="ios-list-box" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../recipe_app/recipe.html">
+                <ion-icon name="ios-restaurant" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../music_app/music.html">
+                <ion-icon name="ios-headset" size="large" class="app-icon"></ion-icon>
+            </a>
+            <a href="../shopping_app/shopping.html">
+                <ion-icon name="ios-cart" size="large" class="app-icon"></ion-icon>
+            </a>
+            <ion-icon name="ios-list" size="large" class="app-icon"></ion-icon>
+            <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+            <a href="../setting_app/setting.html">
+                <ion-icon name="ios-settings" size="large" class="app-icon"></ion-icon>
+            </a>
+        </ion-footer>
+    </ion-app>
+
+</body>
+
+</html>
