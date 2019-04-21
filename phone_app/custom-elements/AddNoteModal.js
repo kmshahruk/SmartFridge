@@ -111,7 +111,7 @@ class AddNoteModal extends HTMLElement {
                     <ion-col size="6">
                         <ion-card class="note" onClick="onImageNoteClick(this)">
                             <ion-card-header>
-                                <ion-card-subtitle>Card Title</ion-card-subtitle>
+                                <ion-card-subtitle></ion-card-subtitle>
                             </ion-card-header>
                             <ion-card-content><img src="` + image +
                             `"/></ion-card-content>
@@ -122,7 +122,7 @@ class AddNoteModal extends HTMLElement {
                     <ion-col size="6">
                         <ion-card class="note" onClick="onTextNoteClick(this)">
                             <ion-card-header>
-                                <ion-card-subtitle>Card Title</ion-card-subtitle>
+                                <ion-card-subtitle></ion-card-subtitle>
                             </ion-card-header>
                             <ion-card-content>
                             <textarea rows=20 disabled>` + text +
