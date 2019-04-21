@@ -22,14 +22,12 @@ class AddNoteModal extends HTMLElement {
         <ion-content force-overscroll="false">
            <canvas id="canvas"></canvas>
            <ion-textarea rows="25" id="text"></ion-textarea>
-            
         </ion-content>
         `;
 
         var canvas = document.querySelector('canvas');
         var input = document.querySelector('ion-textarea')
 
-        console.log(this.canvas)
         if (this.content && !this.canvas) {
             input.value = this.content
         }
@@ -88,6 +86,10 @@ class AddNoteModal extends HTMLElement {
     
         } else {
             canvas.style.display = "none"
+            setTimeout(function() {
+                input.setFocus()
+            }, 100)
+            
         }
         
         document.querySelector('#back').addEventListener('click', async () => {

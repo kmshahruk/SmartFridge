@@ -1,5 +1,12 @@
 customElements.define('add-shopping-item', AddShoppingItemModal)
 
+window.onload = function() {
+    setTimeout(function() {
+        document.querySelector('ion-input').setFocus()
+    }, 100)
+    
+}
+
 function addItem(item){
     var a= item.querySelector("ion-input").value
     console.log(a)
