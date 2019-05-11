@@ -1,7 +1,41 @@
 customElements.define('add-item', AddItemModal)
+var editing = false
+var icons = []
+
+function addRemoveButtons(button) {
+  if (editing) {
+    button.innerText = "Edit"
+
+    document.querySelectorAll(".alert-icon").forEach(item => {
+      console.log(item)
+      item.style.display = "block"
+    })
+
+    document.querySelectorAll(".delete-icon").forEach(item => {
+      item.style.display = "none"
+    })
+  } else {
+    button.innerText = "Done"
+
+    document.querySelectorAll(".alert-icon").forEach(item => {
+      console.log(item)
+      item.style.display = "none"
+    })
+
+    document.querySelectorAll(".delete-icon").forEach(item => {
+      item.style.display = "block"
+    })
+  }
+
+  
+
+  editing = !editing
+}
 
 function onItemClick(item) {
-  editItem(item)
+  if (!editing) {
+    editItem(item)
+  }
 }
 
 function addItem() {
