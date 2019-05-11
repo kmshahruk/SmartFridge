@@ -26,8 +26,14 @@
         <ion-header>
             <ion-toolbar>
                 <ion-title>Inventory</ion-title>
+
+                <ion-buttons slot="end">
+                    <ion-button onclick="addRemoveButtons(this)">Edit</ion-button>
+                </ion-buttons>
             </ion-toolbar>
+
             <ion-searchbar></ion-searchbar>
+
         </ion-header>
 
         <ion-content>
@@ -44,7 +50,8 @@
                     </ion-list-header>
                     <ion-item-sliding>
                         <ion-item onclick="onItemClick(this)" expiration="2019-04-23T20:00:00-04:00">
-                            <ion-icon name="ios-alert" color="warning" slot="start" size="small"></ion-icon>
+                            <ion-icon name="ios-alert" color="warning" slot="start" size="small" class="alert-icon"></ion-icon>
+                            <ion-icon name="close" color="danger" slot="start" size="small" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <p>Grapes</p>
                             <p slot="end">4</p>
                         </ion-item>
@@ -57,7 +64,8 @@
 
                     <ion-item-sliding>
                         <ion-item onclick="onItemClick(this)" expiration="2019-07-23T20:00:00-04:00">
-                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <ion-icon name="" color="warning" slot="start" size="small" class="alert-icon"></ion-icon>
+                            <ion-icon name="close" color="danger" slot="start" size="small" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <p>Apples</p>
                             <p slot="end">1</p>
                         </ion-item>
@@ -82,7 +90,8 @@
 
                     <ion-item-sliding>
                         <ion-item onclick="onItemClick(this)" expiration="2019-05-23T20:00:00-04:00">
-                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <ion-icon name="" color="warning" slot="start" size="small" class="alert-icon"></ion-icon>
+                            <ion-icon name="close" color="danger" slot="start" size="small" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <p>Carrots</p>
                             <p slot="end">2</p>
                         </ion-item>
@@ -95,7 +104,8 @@
 
                     <ion-item-sliding>
                         <ion-item onclick="onItemClick(this)" expiration="2019-05-27T20:00:00-04:00">
-                            <ion-icon name="" color="warning" slot="start" size="small"></ion-icon>
+                            <ion-icon name="" color="warning" slot="start" size="small" class="alert-icon"></ion-icon>
+                            <ion-icon name="close" color="danger" slot="start" size="small" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <p>Celery</p>
                             <p slot="end">9</p>
                         </ion-item>
@@ -116,28 +126,39 @@
         <ion-footer scroll-x="true" scroll-y="false" id="app-list">
             <a href="../home/home.html">
                 <ion-icon name="ios-home" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Home</p>
             </a>
             <a href="../calendar_app/calendar.html">
                 <ion-icon name="ios-calendar" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Calendar</p>
             </a>
             <a href="../notes_app/notes.html">
                 <ion-icon name="ios-paper" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Notes</p>
             </a>
             <a href="../recipe_app/recipe.html">
                 <ion-icon name="ios-restaurant" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Recipes</p>
             </a>
             <a href="../music_app/music.html">
                 <ion-icon name="ios-headset" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Music</p>
             </a>
             <a href="../shopping_app/shopping.html">
                 <ion-icon name="ios-cart" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Shopping</p>
             </a>
             <a href="../inventory_app/inventory.html">
                 <ion-icon name="ios-list" size="large" class="app-icon"></ion-icon>
-            </a>    
-            <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Inventory</p>
+            </a>      
+            <a href="">
+                <ion-icon name="logo-youtube" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Videos</p>
+            </a>     
             <a href="../setting_app/setting.html">
                 <ion-icon name="ios-settings" size="large" class="app-icon"></ion-icon>
+                <p class="icon-label">Settings</p>
             </a>
         </ion-footer>
     </ion-app>

@@ -58,7 +58,9 @@ class AddItemModal extends HTMLElement {
                 if (this.listName) {
                     document.getElementById(this.listName).innerHTML += `<ion-item-sliding>
                     <ion-item onclick="onItemClick(this)" expiration="` + datetime + `">
-                    <ion-icon name="" color="warning" slot="start" size="small"></ion-icon><p>`
+                    <ion-icon name="" color="warning" slot="start" size="small" class="alert-icon"></ion-icon>
+                    <ion-icon name="close" color="danger" slot="start" size="small" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
+                    <p>`
                     + name + `</p><p slot="end" id="test">` + quantity + 
                     `</p></ion-item><ion-item-options>
                     <ion-item-option color="danger" onclick="deleteInventoryItem(this)">
