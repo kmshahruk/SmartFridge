@@ -1,6 +1,5 @@
 #app-list {
-    padding-top: 1%;
-    height: 5vh;
+    height: 6vh;
     overflow: scroll;
     white-space: nowrap;
     display: flex;
@@ -10,4 +9,9 @@
 a {
     color: unset;
     text-decoration: none;
+    text-align: center;
+}
+
+.icon-label {
+    margin-top: unset !important;
 }
