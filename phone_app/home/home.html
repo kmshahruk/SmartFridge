@@ -63,6 +63,9 @@
                 <ion-header>
                     <ion-toolbar>
                         <ion-title>Notes</ion-title>
+                        <ion-buttons slot="end">
+                                <ion-button onclick="addRemoveButtons(this)">Edit</ion-button>
+                              </ion-buttons>
                     </ion-toolbar>
 
                     <ion-searchbar></ion-searchbar>
@@ -73,6 +76,7 @@
                         <ion-row id="notesRow">
                             <ion-col class="noteCol" size="6">
                                 <ion-card class="note" onClick="onTextNoteClick(this)">
+                                        <ion-icon name="close" color="danger" slot="start" size="large" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                                     <ion-card-header>
                                         <ion-card-subtitle></ion-card-subtitle>
                                     </ion-card-header>
@@ -84,6 +88,7 @@
                             </ion-col>
                             <ion-col class="noteCol" size="6">
                                 <ion-card class="note" onClick="onTextNoteClick(this)">
+                                        <ion-icon name="close" color="danger" slot="start" size="large" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                                     <ion-card-header>
                                         <ion-card-subtitle></ion-card-subtitle>
                                     </ion-card-header>

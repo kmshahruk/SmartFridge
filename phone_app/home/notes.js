@@ -1,5 +1,32 @@
 customElements.define('add-note', AddNoteModal)
 
+var editing = false
+
+function deleteInventoryItem(item) {
+  console.log(item)
+  item.parentElement.parentElement.style.display = "none";
+}
+
+function addRemoveButtons(button) {
+  if (editing) {
+    button.innerText = "Edit"
+
+    document.querySelectorAll(".delete-icon").forEach(item => {
+      item.style.display = "none"
+    })
+  } else {
+    button.innerText = "Done"
+
+    document.querySelectorAll(".delete-icon").forEach(item => {
+      item.style.display = "block"
+    })
+  }
+
+  
+
+  editing = !editing
+}
+
 async function createNoteModal(drawnNote) {
   const modalController = document.querySelector('ion-modal-controller');
   await modalController.componentOnReady();
@@ -64,11 +91,15 @@ async function editNote(item, canvas) {
 }
 
 function onImageNoteClick(item) {
-  editNote(item, true)
-  console.log("onImageNOteClick")
+  if (!editing) {
+    editNote(item, true)
+    console.log("onImageNOteClick")
+  }
 }
 
 function onTextNoteClick(item) {
-  editNote(item, false)
-  console.log("onTextNoteClick")
+  if (!editing) {
+    editNote(item, false)
+    console.log("onTextNoteClick")
+  }
 }
