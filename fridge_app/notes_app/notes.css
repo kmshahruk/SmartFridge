@@ -27,3 +27,11 @@ ion-card-content > textarea {
     overflow: hidden;
     resize: none;
 }
+
+.delete-icon {
+    position: absolute;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: none;
+    z-index: 100;
+}

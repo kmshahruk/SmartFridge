@@ -110,6 +110,7 @@ class AddNoteModal extends HTMLElement {
                     document.querySelector('#notesRow').innerHTML = `
                     <ion-col size="6">
                         <ion-card class="note" onClick="onImageNoteClick(this)">
+                        <ion-icon name="close" color="danger" slot="start" size="large" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <ion-card-header>
                                 <ion-card-subtitle></ion-card-subtitle>
                             </ion-card-header>
@@ -121,6 +122,7 @@ class AddNoteModal extends HTMLElement {
                     document.querySelector('#notesRow').innerHTML = `
                     <ion-col size="6">
                         <ion-card class="note" onClick="onTextNoteClick(this)">
+                        <ion-icon name="close" color="danger" slot="start" size="large" class="delete-icon" onclick="deleteInventoryItem(this)"></ion-icon>
                             <ion-card-header>
                                 <ion-card-subtitle></ion-card-subtitle>
                             </ion-card-header>

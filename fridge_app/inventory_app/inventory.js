@@ -1,6 +1,5 @@
 customElements.define('add-item', AddItemModal)
 var editing = false
-var icons = []
 
 function addRemoveButtons(button) {
   if (editing) {
