@@ -113,7 +113,7 @@ async function createCompartmentModal(evnt) {
     // listen for close event
     const button = element.querySelector('#cancel');
     button.addEventListener('click', () => {
-      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ temp +"°F <br><br>Humidity: "+ humid +"%</div>";
+      currentCompartment.innerHTML = "<strong class = 'compTitle'> Compartment "+ currentCompartment.id+ "</strong><br><br><br><div class= 'compBody'>Tempature: "+ oldTemp +"°F <br><br>Humidity: "+ oldHumid +"%</div>";
 
       modalController.dismiss();
     });
