@@ -92,3 +92,23 @@ ion-slides {
 .compName {
     font-weight: bold;
 }
+
+.ion-card-title{
+    font-size: 25%;
+}
+
+.h2{
+    font-size: 600px;
+}
+
+ion-label > p {
+    font-size: 20px !important;
+}
+
+ion-label > h2 {
+    font-size: 25px !important;
+}
+
+ion-item > p {
+    font-size: 20px !important;
+}
